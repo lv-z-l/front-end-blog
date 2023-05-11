@@ -1,0 +1,25 @@
+{
+  "hash": "c8e21635",
+  "browserHash": "df443207",
+  "optimized": {
+    "vue": {
+      "src": "../../../../lvzl-blog/node_modules/.pnpm/registry.npmmirror.com+vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "f4a4d7f5",
+      "needsInterop": false
+    },
+    "@theme/index": {
+      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+vitepress@1.0.0-alpha.75_@algolia+client-search@4.17.0/node_modules/vitepress/dist/client/theme-default/index.js",
+      "file": "@theme_index.js",
+      "fileHash": "4f07cfa5",
+      "needsInterop": false
+    },
+    "xmind-embed-viewer": {
+      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+xmind-embed-viewer@1.1.0/node_modules/xmind-embed-viewer/dist/esm/index.js",
+      "file": "xmind-embed-viewer.js",
+      "fileHash": "f59792cb",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}
