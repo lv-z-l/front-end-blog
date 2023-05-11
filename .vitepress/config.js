@@ -19,7 +19,7 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    logo: '/assets/tiger.jpg',
+    // logo: '/assets/tiger.jpg',
     nav: [
       {
         text: 'html & css',

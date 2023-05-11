@@ -21,4 +21,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-<link rel="modulepreload" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fetch/3.6.2/fetch.min.js">

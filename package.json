@@ -19,6 +19,7 @@
     "vitepress": "1.0.0-alpha.75"
   },
   "dependencies": {
+    "vue-next-directive": "^1.0.1",
     "xmind-embed-viewer": "^1.1.0"
   }
 }

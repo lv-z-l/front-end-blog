@@ -1,9 +1,12 @@
 <template>
-  <div id="container-or-iframe-selector"></div>
+  <div id="container-or-iframe-selector" v-loading="loading"></div>
 </template>
 <script setup>
+import vLoading from 'vue-next-directive/lib/directives/loading/index'
 import { XMindEmbedViewer } from 'xmind-embed-viewer'
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+
+const loading = ref(true)
 
 const props = defineProps({
   url: String
@@ -13,13 +16,36 @@ onMounted(() => {
   const viewer = new XMindEmbedViewer({
     el: '#container-or-iframe-selector', // HTMLElement | HTMLIFrameElement | string
   })
+  viewer.setStyles({
+    width: '100%',
+    height: '100%'
+  })
   fetch(props.url)
     .then(res => res.arrayBuffer())
-    .then(file => viewer.load(file))
+    .then(file => {
+      viewer.load(file)
+      setTimeout(() => loading.value = false, 1000)
+    })
     .catch(err => {
+      loading.value = false
       console.log('加载xmind文件出错！')
     })
 })
 
 </script>
-<style lang="scss"></style>
+<style>
+@import url('vue-next-directive/lib/assets/loading.css');
+
+.loading .loading-content .desc {
+  color: #8a8a8a;
+}
+
+#container-or-iframe-selector {
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 64px;
+  height: calc(100vh - 64px);
+}
+</style>
