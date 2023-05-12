@@ -1,3 +1,5 @@
+import "./chunk-4EOJPDL2.js";
+
 // node_modules/.pnpm/registry.npmmirror.com+vitepress@1.0.0-alpha.75_@algolia+client-search@4.17.0/node_modules/vitepress/dist/client/theme-default/index.js
 import "/Users/zllv/my-space/front-end-blog/node_modules/.pnpm/registry.npmmirror.com+vitepress@1.0.0-alpha.75_@algolia+client-search@4.17.0/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
 
