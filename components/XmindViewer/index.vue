@@ -1,5 +1,5 @@
 <template>
-  <div id="container-or-iframe-selector" v-loading="loading"></div>
+  <div id="xmind-container" v-loading="loading"></div>
 </template>
 <script setup>
 import vLoading from 'vue-next-directive/lib/directives/loading/index'
@@ -14,7 +14,7 @@ const props = defineProps({
 
 onMounted(() => {
   const viewer = new XMindEmbedViewer({
-    el: '#container-or-iframe-selector', // HTMLElement | HTMLIFrameElement | string
+    el: '#xmind-container', // HTMLElement | HTMLIFrameElement | string
   })
   viewer.setStyles({
     width: '100%',
@@ -40,7 +40,7 @@ onMounted(() => {
   color: #8a8a8a;
 }
 
-#container-or-iframe-selector {
+#xmind-container {
   width: 100vw;
   position: fixed;
   z-index: 10;
