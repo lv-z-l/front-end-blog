@@ -17,35 +17,21 @@ hero:
 <script setup>
   import { h } from 'vue'
   import { NTimeline, NTimelineItem } from 'naive-ui'
+  import timeLines from '../.vitepress/timelines'
+
+  function onLineClick(item) {
+    if(item.article_id) {
+      window.open('https://juejin.cn/post/' + item.article_id)
+    }
+  }
 </script>
 
 <div id="main-page">
   <img class="drone" src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/244d4f92-3334-4145-a458-6ba70c434393.webp" />
   <img class="cat" src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/0602edf6-e7d8-4457-947c-9b327ea59aa6.png" />
   <div class="article-time-line">
-    <n-timeline>
-      <n-timeline-item content="啊" />
-      <n-timeline-item
-        type="success"
-        title="成功"
-        content="哪里成功"
-        time="2018-04-03 20:46"
-      />
-      <n-timeline-item type="error" content="哪里错误" time="2018-04-03 20:46" />
-      <n-timeline-item
-        type="warning"
-        title="警告"
-        content="哪里警告"
-        time="2018-04-03 20:46"
-      />
-      <n-timeline-item
-        type="info"
-        title="信息"
-        content="是的"
-        time="2018-04-03 20:46"
-        line-type="dashed"
-      />
-      <n-timeline-item content="啊" />
+    <n-timeline size="large" style=" --n-content-text-color: #fff !important;--n-meta-text-color: #fff !important;--n-title-text-color: #fff !important;">
+      <n-timeline-item v-for="item in timeLines" @click="onLineClick(item)"  :type="item.time ? 'success' : 'error'"  v-bind="item" />
     </n-timeline>
   </div>
   <!-- <div class="resume-wrapper">
@@ -55,6 +41,11 @@ hero:
 </div>
 
 <style>
+  :root {
+    --n-content-text-color: #fff !important;
+    --n-meta-text-color: #fff !important;
+    --n-title-text-color: #fff !important;
+  }
   #main-page {
     height: calc(100vh - 64px);
     background-image: url('https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/94ab6785-90da-4ebe-8810-1943b529fdc7.webp');
@@ -82,15 +73,13 @@ hero:
     height: 303px;
   }
   .article-time-line {
-    width: 800px;
-    padding: 100px 64px;
+    width: calc(100% - 300px);
+    padding: 64px;
     height: 100%;
     position: absolute;
     left: 0;
     overflow: auto;
     border-radius: 12px;
-    /* background-color: rgba(24, 0, 206, .2); */
-    /* box-shadow: 10px -10px 20px rgba(0,0,0,.2), -10px 10px 20px hsla(0,0%,100%,.1); */
     display: flex;
   }
   /* .resume-wrapper {
