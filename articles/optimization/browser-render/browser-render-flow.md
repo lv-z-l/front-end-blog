@@ -3,7 +3,7 @@ title: 浏览器运行机制
 author: lvzl
 ---
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/22819120/1682078613129-b4ef8ea5-c9ed-4ef9-b6d8-f95eb7b1f22b.png#averageHue=%23f6e6dd&clientId=u7cadc156-e9c9-4&from=paste&height=753&id=uf91e5000&originHeight=1505&originWidth=2457&originalType=binary&ratio=2&rotation=0&showTitle=false&size=476445&status=done&style=none&taskId=u4d778750-6800-4ff9-ad73-5792cf2a72a&title=&width=1228.5)
+<img src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/773a3d74-ee5c-45a6-8b91-79fde2184f25.png"/>
 ### HTML、CSS、JS 阻塞渲染
 
 - **HTML 本身需要解析成 DOM，肯定是阻塞渲染的。**
@@ -22,11 +22,15 @@ author: lvzl
    1. 可以让你按照自己的想法**给重要的资源一个更高的优先级， 无论是preload还是prefetch，都只会加载，不会执行**
    2. **preload**：以高优先级为当前页面加载资源
    3. **prefetch**：以低优先级为后面的页面加载未来需要的资源，只会在空闲时才去加载
-   4. <!-- 文件加载 -->
-**<link rel="preload" href="main.js" as="script">
-<link rel="prefetch" href="news.js" as="script">**
-   5. <!-- 文件执行 -->
-**<script src="main.js" defer></script>**
+   4. 文件加载
+   ```html
+   <link rel="preload" href="main.js" as="script">
+   <link rel="prefetch" href="news.js" as="script">
+   ```
+   5. 文件执行
+   ```html
+   <script src="main.js" defer></script>
+   ```
    6. **preload的资源应该在当前页面立即使用**，如果不**加上script标签执行**预加载的资源，控制台中会显示警告，提示预加载的资源在当前页面没有被引用
    7. **prefetch**的目的是取未来会使用的资源，所以当用户从A页面跳转到B页面时，进行中的**preload**的资源会被中断，而**prefetch**不会
    8. 使用**preload**时，应配合**as**属性，表示该资源的优先级，使用** as="style" **属性将获得最高的优先级，**as ="script"**将获得低优先级或中优先级，其他可以取的值有**font/image/audio/video**
@@ -39,7 +43,7 @@ author: lvzl
 - 更改了 DOM 的几何属性
 - 隐藏、显示了元素（影响到布局的那种）
 - 改变 DOM 树的结构
-- 获取这些属性：offsetTop、offsetLeft、 offsetWidth、offsetHeight、scrollTop、scrollLeft、scrollWidth、scrollHeight、clientTop、clientLeft、clientWidth、clientHeight 时
+- 获取这些属性：offsetTop、offsetLeft、offsetWidth、offsetHeight、scrollTop、scrollLeft、scrollWidth、scrollHeight、clientTop、clientLeft、clientWidth、clientHeight 时
 - 调用了 **getComputedStyle**
 #### 重绘
 没有更改几何属性，只是颜色，背景这些变化，会进行重绘。

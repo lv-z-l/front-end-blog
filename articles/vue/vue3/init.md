@@ -3,4 +3,4 @@ title: 初始化流程
 author: lvzl
 ---
 
-<img src="https://cdn.nlark.com/yuque/0/2023/jpeg/22819120/1683806821061-500b5dbf-56f6-463f-abab-b7355aa2eaf6.jpeg"/>
+<img src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/a250bc26-341b-4321-a104-0dff3c5c7d54.jpeg"/>

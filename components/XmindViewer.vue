@@ -39,13 +39,4 @@ onMounted(() => {
 .loading .loading-content .desc {
   color: #8a8a8a;
 }
-
-#xmind-container {
-  width: 100vw;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 64px;
-  height: calc(100vh - 64px);
-}
 </style>
