@@ -30,22 +30,13 @@ hero:
   <img class="drone" src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/244d4f92-3334-4145-a458-6ba70c434393.webp" />
   <img class="cat" src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/0602edf6-e7d8-4457-947c-9b327ea59aa6.png" />
   <div class="article-time-line">
-    <n-timeline size="large" style=" --n-content-text-color: #fff !important;--n-meta-text-color: #fff !important;--n-title-text-color: #fff !important;">
+    <n-timeline size="large">
       <n-timeline-item v-for="item in timeLines" @click="onLineClick(item)"  :type="item.time ? 'success' : 'error'"  v-bind="item" />
     </n-timeline>
   </div>
-  <!-- <div class="resume-wrapper">
-    <div class="resume-content">
-    </div>
-  </div> -->
 </div>
 
 <style>
-  :root {
-    --n-content-text-color: #fff !important;
-    --n-meta-text-color: #fff !important;
-    --n-title-text-color: #fff !important;
-  }
   #main-page {
     height: calc(100vh - 64px);
     background-image: url('https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/94ab6785-90da-4ebe-8810-1943b529fdc7.webp');

@@ -287,4 +287,25 @@ for (let i = 1; i < origin.length; i++) {
   temp = current
 }
 
+/**
+ * 从掘金的接口获取数据并处理返回
+ * @param {*} articles 
+ * @returns 
+ */
+function getTimeLines(articles) {
+  const res = []
+  articles.map(arl => {
+    const { article_info } = arl
+    const { title, ctime, brief_content, cover_image, tags } = article_info
+    return {
+      title,
+      content: brief_content,
+      cover_image,
+      tag: tags.map(tag => tag.tag_name).join('、'),
+      time: new Date(Number(ctime.padEnd(ctime.length + 3, '0'))).toLocaleDateString('zh-CN')
+    }
+  })
+  return res
+}
+
 export default origin
