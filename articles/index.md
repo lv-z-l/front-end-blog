@@ -31,7 +31,15 @@ hero:
   <img class="cat" src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/0602edf6-e7d8-4457-947c-9b327ea59aa6.png" />
   <div class="article-time-line">
     <n-timeline size="large">
-      <n-timeline-item v-for="item in timeLines" @click="onLineClick(item)"  :type="item.time ? 'success' : 'error'"  v-bind="item" />
+      <n-timeline-item v-for="item in timeLines" @click="onLineClick(item)"  :type="item.time ? 'success' : 'error'"  v-bind="item">
+        <template v-slot:header>
+          <div class="color-fff">{{item.title}}</div>
+        </template>
+        <template v-slot:footer>
+          <div class="color-fff">{{item.time}}</div>
+        </template>
+        <div class="color-fff">{{item.content}}</div>
+      </n-timeline-item>
     </n-timeline>
   </div>
 </div>
@@ -72,6 +80,9 @@ hero:
     overflow: auto;
     border-radius: 12px;
     display: flex;
+  }
+  .color-fff{
+    color: #fff;
   }
   /* .resume-wrapper {
     width: 380px;
