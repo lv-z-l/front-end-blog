@@ -3,13 +3,15 @@ import {
   createBaseVNode,
   createElementBlock,
   defineComponent,
+  init_vue_runtime_esm_bundler,
   openBlock,
   ref,
   toDisplayString
-} from "./chunk-TSAUKRC2.js";
-import "./chunk-4EOJPDL2.js";
+} from "./chunk-7ACXSJ7B.js";
+import "./chunk-AC2VUBZ6.js";
 
 // node_modules/.pnpm/registry.npmmirror.com+vue-next-directive@1.0.1_vue@3.2.47/node_modules/vue-next-directive/lib/directives/loading/index.js
+init_vue_runtime_esm_bundler();
 var _hoisted_1 = { class: "loading" };
 var _hoisted_2 = { class: "loading-content" };
 var _hoisted_3 = ["width", "height"];

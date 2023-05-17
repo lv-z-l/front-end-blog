@@ -1,9 +1,7 @@
 <template>
-  <div id="xmind-container" v-loading="loading"></div>
+  <div id="xmind-container"></div>
 </template>
 <script setup>
-import vLoading from 'vue-next-directive/lib/directives/loading/index'
-import { XMindEmbedViewer } from 'xmind-embed-viewer'
 import { onMounted, ref } from 'vue'
 
 const loading = ref(true)
@@ -12,7 +10,8 @@ const props = defineProps({
   url: String
 })
 
-onMounted(() => {
+onMounted(async () => {
+  const { XMindEmbedViewer } = await import('xmind-embed-viewer')
   const viewer = new XMindEmbedViewer({
     el: '#xmind-container', // HTMLElement | HTMLIFrameElement | string
   })
