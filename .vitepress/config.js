@@ -23,9 +23,9 @@ export default defineConfig({
   themeConfig: {
     nav,
     sidebar,
-    // logo: '/assets/tiger.jpg',
+    logo: 'https://p3-passport.byteimg.com/img/user-avatar/464e00b478bc3c604aad6b2518137d5a~180x180.awebp',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/lv-z-l/front-end-blog' }
     ]
   }
 })
