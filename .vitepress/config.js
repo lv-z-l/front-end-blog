@@ -10,6 +10,7 @@ export default defineConfig({
   srcDir: './articles',
   description: "write something!",
   ignoreDeadLinks: true,
+  appearance: 'dark',
   vite: {
     resolve: {
       alias: {
