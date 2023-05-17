@@ -15,8 +15,9 @@
             <div class="color-fff">
               <span class="color-fff-span" @click="onLineClick(item)">{{ item.title }} </span>
               <n-space v-if="item.tags" style="display: inline-flex;">
-                <n-tag v-for="tag in item.tags.split('、')" size="small" :color="{ color: tagColors[tag] }" round>{{ tag
-                }}</n-tag>
+                <n-tag v-for="tag in item.tags.split('、')" size="small" :color="{ color: tagColors[tag] }" round>
+                  {{ tag }}
+                </n-tag>
               </n-space>
             </div>
           </template>

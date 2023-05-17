@@ -3,6 +3,7 @@
     <n-spin size="medium" v-if="loading" />
   </div>
 </template>
+
 <script setup>
 import { onMounted, ref } from 'vue'
 const { NSpin } = await import('naive-ui/lib/spin')
