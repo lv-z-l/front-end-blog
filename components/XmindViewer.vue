@@ -1,9 +1,11 @@
 <template>
-  <div id="xmind-container"></div>
+  <div id="xmind-container">
+    <n-spin size="medium" v-if="loading" />
+  </div>
 </template>
 <script setup>
 import { onMounted, ref } from 'vue'
-
+const { NSpin } = await import('naive-ui/lib/spin')
 const loading = ref(true)
 
 const props = defineProps({
@@ -33,9 +35,13 @@ onMounted(async () => {
 
 </script>
 <style>
-@import url('vue-next-directive/lib/assets/loading.css');
+#xmind-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.loading .loading-content .desc {
-  color: #8a8a8a;
+.n-spin-body {
+  position: absolute;
 }
 </style>

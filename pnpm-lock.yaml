@@ -4,9 +4,6 @@ dependencies:
   naive-ui:
     specifier: ^2.34.3
     version: registry.npmmirror.com/naive-ui@2.34.3(vue@3.2.47)
-  vue-next-directive:
-    specifier: ^1.0.1
-    version: registry.npmmirror.com/vue-next-directive@1.0.1(vue@3.2.47)
   xmind-embed-viewer:
     specifier: ^1.1.0
     version: registry.npmmirror.com/xmind-embed-viewer@1.1.0
@@ -1114,17 +1111,6 @@ packages:
     dependencies:
       vue: registry.npmmirror.com/vue@3.2.47
     dev: true
-
-  registry.npmmirror.com/vue-next-directive@1.0.1(vue@3.2.47):
-    resolution: {integrity: sha512-QXEvhWWehUPmEBuMzDd0lniZgaFCFJ8SWACCjz+vsMj6X8hQtfR5fhewsbRrtKVwg8mhKlW9rArzEtKQoy/eCQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-next-directive/-/vue-next-directive-1.0.1.tgz}
-    id: registry.npmmirror.com/vue-next-directive/1.0.1
-    name: vue-next-directive
-    version: 1.0.1
-    peerDependencies:
-      vue: ^3.2.25
-    dependencies:
-      vue: registry.npmmirror.com/vue@3.2.47
-    dev: false
 
   registry.npmmirror.com/vue@3.2.47:
     resolution: {integrity: sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue/-/vue-3.2.47.tgz}

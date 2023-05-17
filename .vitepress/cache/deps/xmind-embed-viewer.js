@@ -1,4 +1,4 @@
-import "./chunk-AC2VUBZ6.js";
+import "./chunk-OL3AADLO.js";
 
 // node_modules/.pnpm/registry.npmmirror.com+xmind-embed-viewer@1.1.0/node_modules/xmind-embed-viewer/dist/esm/channel-controller.js
 var IframeEventChannelController = class {
