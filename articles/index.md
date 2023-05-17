@@ -15,8 +15,11 @@ hero:
 ---
 
 <script setup>
+  import { Suspense } from 'vue'
   import CustomHome from '@/CustomHome'
 </script>
 
-<CustomHome/>
+<Suspense>
+  <CustomHome/>
+</Suspense>
 
