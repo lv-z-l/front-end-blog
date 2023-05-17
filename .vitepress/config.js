@@ -11,6 +11,7 @@ export default defineConfig({
   description: "write something!",
   ignoreDeadLinks: true,
   appearance: 'dark',
+  base: '/front-end-blog/',
   vite: {
     resolve: {
       alias: {
