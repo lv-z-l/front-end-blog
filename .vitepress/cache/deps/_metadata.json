@@ -1,68 +1,47 @@
 {
-  "hash": "38f186b7",
-  "browserHash": "83ea537a",
+  "hash": "d7d31d8e",
+  "browserHash": "89431a0c",
   "optimized": {
     "vue": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "685ec837",
+      "fileHash": "467a607c",
       "needsInterop": false
     },
     "@theme/index": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+vitepress@1.0.0-alpha.75_@algolia+client-search@4.17.0/node_modules/vitepress/dist/client/theme-default/index.js",
+      "src": "../../../node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "d4378aef",
+      "fileHash": "07f5cba7",
       "needsInterop": false
     },
     "naive-ui/lib/timeline": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+naive-ui@2.34.3_vue@3.2.47/node_modules/naive-ui/lib/timeline/index.js",
+      "src": "../../../node_modules/naive-ui/lib/timeline/index.js",
       "file": "naive-ui_lib_timeline.js",
-      "fileHash": "c4c42d78",
+      "fileHash": "02593105",
       "needsInterop": true
     },
     "naive-ui/lib/tag": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+naive-ui@2.34.3_vue@3.2.47/node_modules/naive-ui/lib/tag/index.js",
+      "src": "../../../node_modules/naive-ui/lib/tag/index.js",
       "file": "naive-ui_lib_tag.js",
-      "fileHash": "89876f28",
+      "fileHash": "aa545e24",
       "needsInterop": true
     },
     "naive-ui/lib/space": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+naive-ui@2.34.3_vue@3.2.47/node_modules/naive-ui/lib/space/index.js",
+      "src": "../../../node_modules/naive-ui/lib/space/index.js",
       "file": "naive-ui_lib_space.js",
-      "fileHash": "c4fc18d7",
-      "needsInterop": true
-    },
-    "naive-ui/lib/spin": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+naive-ui@2.34.3_vue@3.2.47/node_modules/naive-ui/lib/spin/index.js",
-      "file": "naive-ui_lib_spin.js",
-      "fileHash": "9751f1d1",
-      "needsInterop": true
-    },
-    "xmind-embed-viewer": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+xmind-embed-viewer@1.1.0/node_modules/xmind-embed-viewer/dist/esm/index.js",
-      "file": "xmind-embed-viewer.js",
-      "fileHash": "1ee4bab9",
-      "needsInterop": false
-    },
-    "xmind-embed-viewer/dist/umd/xmind-embed-viewer": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+xmind-embed-viewer@1.1.0/node_modules/xmind-embed-viewer/dist/umd/xmind-embed-viewer.js",
-      "file": "xmind-embed-viewer_dist_umd_xmind-embed-viewer.js",
-      "fileHash": "dea9f4e0",
+      "fileHash": "788724e8",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-UOC7VWBW": {
-      "file": "chunk-UOC7VWBW.js"
+    "chunk-DEHU6NP2": {
+      "file": "chunk-DEHU6NP2.js"
     },
-    "chunk-5ZEOSRPH": {
-      "file": "chunk-5ZEOSRPH.js"
+    "chunk-IM522OZQ": {
+      "file": "chunk-IM522OZQ.js"
     },
-    "chunk-VPHC6GSP": {
-      "file": "chunk-VPHC6GSP.js"
-    },
-    "chunk-GFWJXKXL": {
-      "file": "chunk-GFWJXKXL.js"
+    "chunk-Q2ZFWL4G": {
+      "file": "chunk-Q2ZFWL4G.js"
     },
     "chunk-OL3AADLO": {
       "file": "chunk-OL3AADLO.js"
