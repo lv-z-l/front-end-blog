@@ -6,12 +6,14 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-const { NSpin } = await import('naive-ui/lib/spin')
+import * as spin from 'naive-ui/lib/spin'
 const loading = ref(true)
 
 const props = defineProps({
   url: String
 })
+
+const { NSpin } = spin
 
 onMounted(async () => {
   const { XMindEmbedViewer } = await import('xmind-embed-viewer')

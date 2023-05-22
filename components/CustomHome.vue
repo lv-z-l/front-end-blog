@@ -36,10 +36,13 @@
 import { reactive, ref } from 'vue'
 import Rail from '@/Rail'
 import { origin, tagColors } from '../.vitepress/timelines'
+import * as timeline from 'naive-ui/lib/timeline'
+import * as tag from 'naive-ui/lib/tag'
+import * as space from 'naive-ui/lib/space'
 
-const { NTimeline, NTimelineItem } = await import('naive-ui/lib/timeline')
-const { NTag } = await import('naive-ui/lib/tag')
-const { NSpace } = await import('naive-ui/lib/space')
+const { NSpace } = space
+const { NTag } = tag
+const { NTimeline, NTimelineItem } = timeline
 
 function onLineClick(item) {
   if (item.article_id) {
