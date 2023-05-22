@@ -103,10 +103,10 @@ article.push(...originCopy)
 .article-time-line {
   width: calc(100% - 300px);
   padding: 16px 64px 64px 64px;
-  height: calc(100% - 80px);
+  height: calc(100% - 120px);
   position: absolute;
   left: 0;
-  top: 64px;
+  top: 120px;
   overflow: auto;
   border-radius: 12px;
   display: flex;
@@ -122,8 +122,9 @@ article.push(...originCopy)
 }
 
 .main-page-space {
-  padding: 15px 64px;
+  margin: 15px 64px;
   position: absolute;
+  width: calc(100% - 300px);
   left: 0;
 }
 

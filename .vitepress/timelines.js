@@ -276,13 +276,13 @@ const origin = [
 
 ]
 
-const alltags = new Set()
+const alltags = []
 
 origin.unshift({ title: new Date().getFullYear() + 1 })
 
 for (let i = 1; i < origin.length; i++) {
   const { time, tags } = origin[i]
-  tags && alltags.add(...tags.split('、'))
+  tags && alltags.push(...tags.split('、'))
   const current = time.substring(0, 4)
   if (temp && current !== temp) {
     origin.splice(i, 0, { title: temp })
@@ -319,7 +319,9 @@ function getAnyColor() {
 
 const tagColors = {}
 
-for (const tag of alltags) {
+const filterTags = [...new Set(alltags)].filter(tag => !tag.startsWith('掘金'))
+
+for (const tag of filterTags) {
   tagColors[tag] = getAnyColor()
 }
 
