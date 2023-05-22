@@ -16,10 +16,16 @@
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "vitepress": "1.0.0-alpha.76"
   },
   "dependencies": {
     "naive-ui": "^2.34.4",
     "xmind-embed-viewer": "^1.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

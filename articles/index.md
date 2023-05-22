@@ -14,39 +14,37 @@ hero:
       link: /
 ---
 
-<template>
-  <div id="main-page">
-    <n-space :class="['main-page-space', show ? 'show' : 'hidden']">
-      <n-tag v-for="tag in Object.keys(tagColors)" :class="[currentTag === tag ? 'current-tag' : '']"
-        @click="filterArticleByTag(tag)" :color="{ color: tagColors[tag] }" round>{{ tag }}</n-tag>
-    </n-space>
-    <img class="drone"
-      src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/244d4f92-3334-4145-a458-6ba70c434393.webp" />
-    <img class="cat"
-      src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/0602edf6-e7d8-4457-947c-9b327ea59aa6.png" />
-    <div :class="['article-time-line', show ? 'show' : 'hidden']">
-      <n-timeline size="large">
-        <n-timeline-item v-for="item in article" :type="item.time ? 'success' : 'error'" v-bind="item">
-          <template v-slot:header>
-            <div class="color-fff">
-              <span class="color-fff-span" @click="onLineClick(item)">{{ item.title }} </span>
-              <n-space v-if="item.tags" style="display: inline-flex;">
-                <n-tag v-for="tag in item.tags.split('、')" size="small" :color="{ color: tagColors[tag] }" round>
-                  {{ tag }}
-                </n-tag>
-              </n-space>
-            </div>
-          </template>
-          <template v-slot:footer>
-            <div class="color-fff">{{ item.time }}</div>
-          </template>
-          <div class="color-fff">{{ item.content }}</div>
-        </n-timeline-item>
-      </n-timeline>
-    </div>
-    <rail @visible-change="val => show = val" />
+<div id="main-page">
+  <n-space :class="['main-page-space', show ? 'show' : 'hidden']">
+    <n-tag v-for="tag in Object.keys(tagColors)" :class="[currentTag === tag ? 'current-tag' : '']"
+      @click="filterArticleByTag(tag)" :color="{ color: tagColors[tag] }" round>{{ tag }}</n-tag>
+  </n-space>
+  <img class="drone"
+    src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/244d4f92-3334-4145-a458-6ba70c434393.webp" />
+  <img class="cat"
+    src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/0602edf6-e7d8-4457-947c-9b327ea59aa6.png" />
+  <div :class="['article-time-line', show ? 'show' : 'hidden']">
+    <n-timeline size="large">
+      <n-timeline-item v-for="item in article" :type="item.time ? 'success' : 'error'" v-bind="item">
+        <template v-slot:header>
+          <div class="color-fff">
+            <span class="color-fff-span" @click="onLineClick(item)">{{ item.title }} </span>
+            <n-space v-if="item.tags" style="display: inline-flex;">
+              <n-tag v-for="tag in item.tags.split('、')" size="small" :color="{ color: tagColors[tag] }" round>
+                {{ tag }}
+              </n-tag>
+            </n-space>
+          </div>
+        </template>
+        <template v-slot:footer>
+          <div class="color-fff">{{ item.time }}</div>
+        </template>
+        <div class="color-fff">{{ item.content }}</div>
+      </n-timeline-item>
+    </n-timeline>
   </div>
-</template>
+  <rail @visible-change="val => show = val" />
+</div>
 
 <script setup>
 import { reactive, ref } from 'vue'

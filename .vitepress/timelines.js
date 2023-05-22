@@ -278,7 +278,7 @@ const origin = [
 
 const alltags = []
 
-origin.unshift({ title: new Date().getFullYear() + 1 })
+origin.unshift({ title: '' + (new Date().getFullYear() + 1) })
 
 for (let i = 1; i < origin.length; i++) {
   const { time, tags } = origin[i]
