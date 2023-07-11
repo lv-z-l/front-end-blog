@@ -20,7 +20,6 @@
     "vitepress": "1.0.0-alpha.76"
   },
   "dependencies": {
-    "naive-ui": "^2.34.4",
     "xmind-embed-viewer": "^1.1.0"
   },
   "config": {

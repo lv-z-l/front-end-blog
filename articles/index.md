@@ -15,33 +15,33 @@ hero:
 ---
 
 <div id="main-page">
-  <n-space :class="['main-page-space', show ? 'show' : 'hidden']">
-    <n-tag v-for="tag in Object.keys(tagColors)" :class="[currentTag === tag ? 'current-tag' : '']"
-      @click="filterArticleByTag(tag)" :color="{ color: tagColors[tag] }" round>{{ tag }}</n-tag>
-  </n-space>
+  <div :class="['space', show ? 'show' : 'hidden']">
+    <tag v-for="tag in Object.keys(tagColors)" :class="[currentTag === tag ? 'current-tag' : '']"
+      @click="filterArticleByTag(tag)" :color="tagColors[tag]">{{ tag }}</tag>
+  </div>
   <img class="drone"
-    src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/244d4f92-3334-4145-a458-6ba70c434393.webp" />
+    :src="drone" />
   <img class="cat"
-    src="https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/0602edf6-e7d8-4457-947c-9b327ea59aa6.png" />
+    :src="cat" />
   <div :class="['article-time-line', show ? 'show' : 'hidden']">
-    <n-timeline size="large">
-      <n-timeline-item v-for="item in article" :type="item.time ? 'success' : 'error'" v-bind="item">
+    <div class="time-line">
+      <time-line-item v-for="item in article" v-bind="item">
         <template v-slot:header>
-          <div class="color-fff">
-            <span class="color-fff-span" @click="onLineClick(item)">{{ item.title }} </span>
-            <n-space v-if="item.tags" style="display: inline-flex;">
-              <n-tag v-for="tag in item.tags.split('、')" size="small" :color="{ color: tagColors[tag] }" round>
+          <div>
+            <span class="color-span" @click="onLineClick(item)">{{ item.title }} </span>
+            <div class="timeline-space" v-if="item.tags">
+              <tag v-for="tag in item.tags.split('、')" size="small" :color="tagColors[tag]">
                 {{ tag }}
-              </n-tag>
-            </n-space>
+              </tag>
+            </div>
           </div>
         </template>
         <template v-slot:footer>
-          <div class="color-fff">{{ item.time }}</div>
+          <div>{{ item.time }}</div>
         </template>
-        <div class="color-fff">{{ item.content }}</div>
-      </n-timeline-item>
-    </n-timeline>
+        <div class="content">{{ item.content }}</div>
+      </time-line-item>
+    </div>
   </div>
   <rail @visible-change="val => show = val" />
 </div>
@@ -50,13 +50,10 @@ hero:
 import { reactive, ref } from 'vue'
 import Rail from '@/Rail'
 import { origin, tagColors } from '../.vitepress/timelines'
-import * as timeline from 'naive-ui/lib/timeline'
-import * as tag from 'naive-ui/lib/tag'
-import * as space from 'naive-ui/lib/space'
-
-const { NSpace } = space
-const { NTag } = tag
-const { NTimeline, NTimelineItem } = timeline
+import cat from '../.vitepress/public/assets/astrocat.png'
+import drone from '../.vitepress/public/assets/hero-drone.webp'
+import TimeLineItem from '@/TimeLineItem'
+import Tag from '@/Tag'
 
 function onLineClick(item) {
   if (item.article_id) {
@@ -86,7 +83,7 @@ article.push(...originCopy)
 <style>
 #main-page {
   height: calc(100vh - 64px);
-  background-image: url('https://mp-d22f2f25-96ec-4381-920f-a0d8df227b60.cdn.bspapp.com/cloudstorage/94ab6785-90da-4ebe-8810-1943b529fdc7.webp');
+  background-image: url('../.vitepress/public/assets/hero-bg-2x.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -126,23 +123,40 @@ article.push(...originCopy)
   display: flex;
 }
 
+.content{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
 .article-time-line.hidden {
   left: calc(0px - 100% + 300px);
 }
 
 .article-time-line,
-.main-page-space {
+.space {
   transition: left .6s linear;
 }
 
-.main-page-space {
+.space {
   margin: 15px 64px;
   position: absolute;
   width: calc(100% - 300px);
   left: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.timeline-space{
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  margin: 0;
 }
 
-.main-page-space.hidden {
+.space.hidden {
   left: -100%
 }
 
@@ -150,11 +164,7 @@ article.push(...originCopy)
   content: "✅";
 }
 
-.color-fff {
-  color: #fff;
-}
-
-.color-fff-span {
+.color-span {
   padding-right: 16px;
   cursor: pointer;
 }
@@ -169,4 +179,3 @@ article.push(...originCopy)
   }
 }
 </style>
-
