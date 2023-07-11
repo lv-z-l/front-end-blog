@@ -1,19 +1,18 @@
 <template>
   <div id="xmind-container">
-    <n-spin size="medium" v-if="loading" />
+    <loading v-if="showLoading"></loading>
   </div>
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import * as spin from 'naive-ui/lib/spin'
-const loading = ref(true)
+import loading from '@/loading'
+
+const showLoading = ref(true)
 
 const props = defineProps({
   url: String
 })
-
-const { NSpin } = spin
 
 onMounted(async () => {
   const { XMindEmbedViewer } = await import('xmind-embed-viewer')
@@ -28,23 +27,20 @@ onMounted(async () => {
     .then(res => res.arrayBuffer())
     .then(file => {
       viewer.load(file)
-      setTimeout(() => loading.value = false, 1000)
+      setTimeout(() => showLoading.value = false, 1000)
     })
     .catch(err => {
-      loading.value = false
+      showLoading.value = false
       console.log('加载xmind文件出错！')
     })
 })
 
 </script>
+
 <style>
 #xmind-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.n-spin-body {
-  position: absolute;
 }
 </style>
