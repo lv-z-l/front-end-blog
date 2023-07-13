@@ -39,7 +39,7 @@ hero:
         <template v-slot:footer>
           <div>{{ item.time }}</div>
         </template>
-        <div class="content">{{ item.content }}</div>
+        <div class="time-line-content">{{ item.content }}</div>
       </time-line-item>
     </div>
   </div>
@@ -123,7 +123,7 @@ article.push(...originCopy)
   display: flex;
 }
 
-.content{
+.time-line-content{
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
