@@ -14,7 +14,7 @@ const head = document.querySelector('head')
 
 const meta = document.createElement('meta')
 meta.setAttribute('name', 'referrer')
-meta.setAttribute('content', 'nerver')
+meta.setAttribute('content', 'never')
 
 head.insertBefore(meta, head.childNodes[0])
 
