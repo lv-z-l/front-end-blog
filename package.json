@@ -12,7 +12,7 @@
   "license": "ISC",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build && node ./buildend/index.js",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
     "vitepress": "1.0.0-beta.5"
   },
   "dependencies": {
+    "jsdom": "^22.1.0",
     "xmind-embed-viewer": "^1.1.0"
   },
   "config": {
