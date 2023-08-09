@@ -49,7 +49,7 @@ hero:
 <script setup>
 import { reactive, ref } from 'vue'
 import Rail from '@/Rail'
-import { origin, tagColors } from '../.vitepress/timelines'
+import { origin, tagColors } from './timelines'
 import cat from '../.vitepress/public/assets/astrocat.png'
 import drone from '../.vitepress/public/assets/hero-drone.webp'
 import TimeLineItem from '@/TimeLineItem'

@@ -3,7 +3,8 @@ const path = require('path')
 
 const SRC_DIR = 'articles'
 
-const titlePrefix = 'title: ', titleSuffix = 'author:'
+const TITLE_PRE_FIX = 'title: '
+const TITLE_SUFFIX = 'author: '
 
 const IGNORE_DIR = ['index', 'nav']
 
@@ -17,8 +18,7 @@ function read(path, res) {
     } else {
       if (!IGNORE_DIR.includes(dir)) {
         const fileContent = fs.readFileSync(current)
-        const text = fileContent.subarray(fileContent.indexOf(titlePrefix), fileContent.indexOf(titleSuffix))
-          .toString().replace('title: ', '').trim()
+        const text = fileContent.subarray(fileContent.indexOf(TITLE_PRE_FIX), fileContent.indexOf(TITLE_SUFFIX)).toString().replace('title: ', '').trim()
         res.push({ text, link: current.split(SRC_DIR)[1].replace('.md', '') })
       }
     }
@@ -40,7 +40,7 @@ function getNavJs() {
       }
       data.dir = dir
       res.push(data)
-    } catch (error) { }
+    } catch (error) {}
   }
   return res
 }
@@ -60,16 +60,21 @@ export function genNavSide() {
     const { dir, navText, sideDirs, sideText } = navJs[i]
     const navItem = {
       text: navText,
-      link: `/${dir}/`
+      link: `/${dir}/`,
     }
     if (sideDirs) {
-      sidebar[`/${dir}/`] = sideDirs.map((sidedir, index) => ({ text: sideText[index], items: genItems(`${dir}/${sidedir}`), collapsed: true }))
+      sidebar[`/${dir}/`] = sideDirs.map((sidedir, index) => ({
+        text: sideText[index],
+        items: genItems(`${dir}/${sidedir}`),
+        collapsed: true,
+      }))
     } else {
       sidebar[`/${dir}/`] = genItems(dir)
     }
     nav.push(navItem)
   }
   return {
-    nav, sidebar
+    nav,
+    sidebar,
   }
 }

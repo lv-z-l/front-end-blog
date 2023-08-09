@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { genNavSide } from './dym-import'
+import { genNavSide } from '../dym-import'
 
 const path = require('path')
 
@@ -25,8 +25,6 @@ export default defineConfig({
     nav,
     sidebar,
     logo: 'https://p3-passport.byteimg.com/img/user-avatar/464e00b478bc3c604aad6b2518137d5a~180x180.awebp',
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/lv-z-l/front-end-blog' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/lv-z-l/front-end-blog' }],
   },
 })

@@ -13,11 +13,13 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build && node ./buildend/index.js",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "sync-juejin-articles": "node ./buildstart/index.js"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
-    "vitepress": "1.0.0-beta.5"
+    "vitepress": "1.0.0-beta.5",
+    "node-fetch": "^3.3.2"
   },
   "dependencies": {
     "jsdom": "^22.1.0",
