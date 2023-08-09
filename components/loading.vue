@@ -22,13 +22,11 @@
 
 .loading:before {
   left: -14px;
-
   animation: rectangle infinite 1s ease-in-out -0.4s;
 }
 
 .loading:after {
   right: -14px;
-
   animation: rectangle infinite 1s ease-in-out;
 }
 
