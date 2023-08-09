@@ -1,12 +1,12 @@
 <template>
   <slot v-if="load"></slot>
   <div v-else ref="box" class="loading-box" :style="{ height: h, width: w }">
-    <loading v-if="!load"/>
+    <Loading v-if="!load"/>
   </div>
 </template>
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
-import loading from '@/loading'
+import Loading from '@/Loading'
 
 function initLazyIntersectionObserver(fn) {
   const observer = new IntersectionObserver(

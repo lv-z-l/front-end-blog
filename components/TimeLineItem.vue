@@ -1,5 +1,5 @@
 <template>
-  <lazy h="120px">
+  <Lazy h="120px">
   <main class="timeline color">
     <div class="timeline-wrapper">
       <header class="timeline-header">
@@ -12,11 +12,11 @@
     </div>
     <img class="cover_image" :src="attrs.cover_image" alt="cover image"/>
   </main>
-</lazy>
+</Lazy>
 </template>
 <script setup>
 import { useAttrs } from 'vue'
-import lazy from '@/lazy'
+import Lazy from '@/Lazy'
 
 const attrs = useAttrs()
 </script>
