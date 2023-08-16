@@ -1,18 +1,18 @@
 <template>
   <Lazy h="120px">
-  <main class="timeline color">
-    <div class="timeline-wrapper">
-      <header class="timeline-header">
-      <slot name="header"></slot>
-      </header>
-      <slot></slot>
-      <footer class="timeline-footer">
-        <slot name="footer"></slot>
-      </footer>
-    </div>
-    <img class="cover_image" :src="attrs.cover_image" alt="cover image"/>
-  </main>
-</Lazy>
+    <main class="timeline color">
+      <div class="timeline-wrapper">
+        <header class="timeline-header">
+        <slot name="header"></slot>
+        </header>
+        <slot></slot>
+        <footer class="timeline-footer">
+          <slot name="footer"></slot>
+        </footer>
+      </div>
+      <img class="cover_image" :src="attrs.cover_image" alt="cover image"/>
+    </main>
+  </Lazy>
 </template>
 <script setup>
 import { useAttrs } from 'vue'
