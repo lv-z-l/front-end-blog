@@ -3,45 +3,45 @@ title: HTML5
 author: lvzl
 ---
 
-## 什么是HTML5
+## 什么是 HTML5
 
-HTML5是下一代标准。HTML4.01的上个版本诞生于1999年,HTML5目前为止仍然处于完善之中。
+HTML5 是下一代标准。HTML4.01 的上个版本诞生于 1999 年,HTML5 目前为止仍然处于完善之中。
 
-## HTML5新特性
+## HTML5 新特性
 
-- 用于媒介回放的video和audio元素
+- 用于媒介回放的 video 和 audio 元素
 - 新的特殊内容元素：比如`article`,`footer`,`header`,`nav`,`section`
 - 新的表单控件：比如`calendar`、`date`、`time`、`email`、`url`、`search`
-- 2D/3D绘图&效果
+- 2D/3D 绘图&效果
 - 支持对本地离线存储
 
-## HTML5浏览器支持
+## HTML5 浏览器支持
 
-最新版本的五个主流浏览器都支持某些HTML5特性，IE9以上浏览器支持HTML5新特性。但是IE8以下的浏览器不支持
+最新版本的五个主流浏览器都支持某些 HTML5 特性，IE9 以上浏览器支持 HTML5 新特性。但是 IE8 以下的浏览器不支持
 
-IE8以下(包含IE8)以下版本浏览器兼容HTML5的方法，我们必须使用htmlshiv垫片包，让其支持HTML5新特性
+IE8 以下(包含 IE8)以下版本浏览器兼容 HTML5 的方法，我们必须使用 htmlshiv 垫片包，让其支持 HTML5 新特性
 
 `<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>`
 
-## HTML5新标签
+## HTML5 新标签
 
-### 8个新语义元素和新属性
+### 8 个新语义元素和新属性
 
 `header`,`section`,`footer`,`aside`,`nav`,`main`,`article`,`figure`所有的这些元素都是**块级**元素。
 
-所有的标签都支持HTML5新属性
+所有的标签都支持 HTML5 新属性
 
-| 属性            | 描述                                                         | 浏览器支持性                    |
-| --------------- | ------------------------------------------------------------ | ------------------------------- |
-| contenteditable | 规定是否可编辑元素的内容                                     | All                             |
-| contextmenu     | 指定一个元素的上下文菜单。当用户右击该元素，出现上下文菜单   | 只有Firefox浏览器支持           |
-| data-*          | 嵌入自定义数据                                               | All                             |
-| draggable       | 规定元素是否可拖动。链接和图像默认是可拖动的。经常用它实现拖放操作 | ie8以下浏览器都支持，其它不支持 |
-| hidden          | 规定对元素进行隐藏。如果使用该属性，则会隐藏元素，隐藏的元素不会被显示，可以通过js来设置hidden属性为true,使得元素变得可见 | All                             |
+| 属性            | 描述                                                                                                                           | 浏览器支持性                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| contenteditable | 规定是否可编辑元素的内容                                                                                                       | All                              |
+| contextmenu     | 指定一个元素的上下文菜单。当用户右击该元素，出现上下文菜单                                                                     | 只有 Firefox 浏览器支持          |
+| data-\*         | 嵌入自定义数据                                                                                                                 | All                              |
+| draggable       | 规定元素是否可拖动。链接和图像默认是可拖动的。经常用它实现拖放操作                                                             | ie8 以下浏览器都支持，其它不支持 |
+| hidden          | 规定对元素进行隐藏。如果使用该属性，则会隐藏元素，隐藏的元素不会被显示，可以通过 js 来设置 hidden 属性为 true,使得元素变得可见 | All                              |
 
-### nav标签
+### nav 标签
 
-`<nav>` 标签定义导航链接的部分。并不是所有的 HTML 文档都要使用到`<nav>`元素。`<nav>`元素只是作为标注一个导航链接的区域。比如之前HTML4中我们定义导航的时候通常都这样写：
+`<nav>` 标签定义导航链接的部分。并不是所有的 HTML 文档都要使用到`<nav>`元素。`<nav>`元素只是作为标注一个导航链接的区域。比如之前 HTML4 中我们定义导航的时候通常都这样写：
 
 ```html
 <div class="nav">
@@ -65,44 +65,44 @@ IE8以下(包含IE8)以下版本浏览器兼容HTML5的方法，我们必须使�
 </nav>
 ```
 
-### header标签
+### header 标签
 
 `header`标签定义文档的头部区域，它是作为网页的头部介绍内容或者是导航链接栏的容器。在一个文档中，你可以定义多个`header`元素。
 
-> *header标签不能被放在*`footer`*、*`address`*或者另一个*`header`*元素内部*
+> _header 标签不能被放在_`footer`_、_`address`_或者另一个_`header`_元素内部_
 
-### main标签
+### main 标签
 
-标签规定文档的主要内容。一个文档中只有一个main元素。
+标签规定文档的主要内容。一个文档中只有一个 main 元素。
 
-### aside标签
+### aside 标签
 
-`aside`标签定义`article`标签外的内容。aside的内容应该与附近的内容相关。
+`aside`标签定义`article`标签外的内容。aside 的内容应该与附近的内容相关。
 
-### section标签
+### section 标签
 
-section标签定义了文档的某个区域。比如章节、头部、顶部或者文档的其他区域。
+section 标签定义了文档的某个区域。比如章节、头部、顶部或者文档的其他区域。
 
-### article标签
+### article 标签
 
 定义页面独立的内容。必须是独立于文档的其余部分。
 
-article通常都应用在：
+article 通常都应用在：
 
 - 论坛帖子
 - 博客文档
 - 新闻故事
 - 评论
 
-### figure标签
+### figure 标签
 
 `figure`标签规定独立的流内容(图像、图标、照片、代码等)
 
 `figure`元素的内容应该与主内容有关，同时元素的位置相对于主内容是独立的。如果被删除，则不应对文档流产生影响
 
-### footer标签
+### footer 标签
 
-定义文档或者文档一部分区域的页脚。该元素会包含文档闯作业的姓名、文档的版权信息、使用条款的链接、联系信息等等。在一个文档中，可以定义多个footer。
+定义文档或者文档一部分区域的页脚。该元素会包含文档闯作业的姓名、文档的版权信息、使用条款的链接、联系信息等等。在一个文档中，可以定义多个 footer。
 
 ### 其它的新语义化标签
 
@@ -153,7 +153,7 @@ article通常都应用在：
 </form>
 ```
 
-> *注意：input中的list跟datalist中的id必须关联。*
+> _注意：input 中的 list 跟 datalist 中的 id 必须关联。_
 
 ##### kegen
 
@@ -169,8 +169,6 @@ article通常都应用在：
 </form>
 ```
 
-
-
 ##### output
 
 用于不同类型的输出，比如计算或脚本输出。
@@ -183,11 +181,11 @@ article通常都应用在：
 </form>
 ```
 
-### HTML5新的表单属性
+### HTML5 新的表单属性
 
-#### autocomplete属性
+#### autocomplete 属性
 
-此属性规定form或input应该拥有自动完成功能
+此属性规定 form 或 input 应该拥有自动完成功能
 
 当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项
 
@@ -198,11 +196,11 @@ article通常都应用在：
   </form>
 ```
 
-#### novalidate属性
+#### novalidate 属性
 
-是一个布尔值，当为true时，表示规定在提交表单时，不应该验证form或input域
+是一个布尔值，当为 true 时，表示规定在提交表单时，不应该验证 form 或 input 域
 
-如果给input的type改成email。则我们在输入邮箱时通常自动验证。
+如果给 input 的 type 改成 email。则我们在输入邮箱时通常自动验证。
 
 ```html
 <form action="" autocomplete="on" novalidate>
@@ -214,9 +212,9 @@ article通常都应用在：
 
 提交时不会校验表单项是否合法。
 
-#### input新属性
+#### input 新属性
 
-##### autofocus属性
+##### autofocus 属性
 
 在页面加载时，是否自动获得焦点
 
@@ -224,17 +222,17 @@ article通常都应用在：
 用户名: <input type="text" name="usr_name" autofocus>
 ```
 
-##### formaction属性
+##### formaction 属性
 
-该属性用于描述表单提交的URL地址。会覆盖form元素中的action属性。该属性用于`type='submit'`。
+该属性用于描述表单提交的 URL 地址。会覆盖 form 元素中的 action 属性。该属性用于`type='submit'`。
 
 ```html
 <input type="submit" formaction="http://www.baidu.com" value='提交到百度服务器'>
 ```
 
-##### formenctype属性
+##### formenctype 属性
 
-该属性描述了表单提交到服务器的数据编码(只对form表单中 method=’post‘表单)
+该属性描述了表单提交到服务器的数据编码(只对 form 表单中 method=’post‘表单)
 
 第一个提交按钮以默认编码发送表单数据，第二个提交按钮以 “multipart/form-data” 编码格式发送表单数据:
 
@@ -260,15 +258,15 @@ formmethod 属性覆盖了 `<form>`元素的 method 属性。
 </form>
 ```
 
-##### formnovalidate属性
+##### formnovalidate 属性
 
-formnovalidate属性是一个 boolean 属性.
+formnovalidate 属性是一个 boolean 属性.
 
-formnovalidate属性描述了 `<input>` 元素在表单提交时无需被验证。
+formnovalidate 属性描述了 `<input>` 元素在表单提交时无需被验证。
 
-formnovalidate 属性会覆盖 `<form>` 元素的novalidate属性.
+formnovalidate 属性会覆盖 `<form>` 元素的 novalidate 属性.
 
-formnovalidate 属性与type=”submit一起使用
+formnovalidate 属性与 type=”submit 一起使用
 
 ```html
 <form action="">
@@ -278,40 +276,40 @@ formnovalidate 属性与type=”submit一起使用
 </form>
 ```
 
-##### formtarget属性
+##### formtarget 属性
 
-formtarget属性指定一个名称或一个关键字来指明表单提交数据接收后的展示。
+formtarget 属性指定一个名称或一个关键字来指明表单提交数据接收后的展示。
 
 ```html
 <form action="">
     用户名: <input type="text">
     密码: <input type="password">
-    <input type="submit" formtarget="_blank" value="提交到一个新的页面上"> 
+    <input type="submit" formtarget="_blank" value="提交到一个新的页面上">
 </form>
 ```
 
-##### height和width属性
+##### height 和 width 属性
 
-定义一个图像提交按钮，使用width和height属性
+定义一个图像提交按钮，使用 width 和 height 属性
 
 ```html
 <input type="image" src="img_submit.gif" width="30" height="30">
 ```
 
-##### list属性
+##### list 属性
 
-规定输入域的datalist。datalist是输入域的选项列表。前面有介绍
+规定输入域的 datalist。datalist 是输入域的选项列表。前面有介绍
 
-##### multiple属性
+##### multiple 属性
 
-规定`input`元素可以选择多个值。适用于像input标签：file
+规定`input`元素可以选择多个值。适用于像 input 标签：file
 
 ```html
 上传多个文件:
 选择图片:<input type='file' name= 'img' multiple>
 ```
 
-##### pattern属性
+##### pattern 属性
 
 描述了一个正则表达式用于验证`input`元素的值
 
@@ -325,7 +323,7 @@ formtarget属性指定一个名称或一个关键字来指明表单提交数据�
 </form>
 ```
 
-##### required属性
+##### required 属性
 
 规定必须在提交之前输入框不能为空。
 
@@ -333,41 +331,43 @@ formtarget属性指定一个名称或一个关键字来指明表单提交数据�
 用户名: <input type="text" name="usrname" required>
 ```
 
-##### 新的input类型
+##### 新的 input 类型
 
-HTML5拥有多个表单的输入类型。这些新特性提供了更好的输入控制和验证
+HTML5 拥有多个表单的输入类型。这些新特性提供了更好的输入控制和验证
 
-新的输入类型
+新的输入类型(type 可选值)：
 
-```html
-color : 取色
-date : 日期选择器
-datetime ：选择UTC时间
-datetime-local: 选择一个日期和时间(无时区)
-email：提交表单时。自动验证email的值是否有效
-month：选择月份
-number:输入数值
-range：包含一定范围内数字值的输入域
-search:搜索域
-tel:输入电话号码字段
-time:选择一个时间
-url:输入包含URL地址
-week:选择周和年
+- color : 取色
+- date : 日期选择器
+- datetime ：选择 UTC 时间
+- datetime-local: 选择一个日期和时间(无时区)
+- email：提交表单时。自动验证 email 的值是否有效
+- month：选择月份
+- number:输入数值
+- range：包含一定范围内数字值的输入域
+- search:搜索域
+- tel:输入电话号码字段
+- time:选择一个时间
+- url:输入包含 URL 地址
+- week:选择周和年
+
+## HTM5 中的 API
+
+### 获取单个元素
+
+```js
+document.querySelector('选择器');
 ```
 
-## HTM5中的API
+### 获取多个元素
 
-### 获取单个元素：
-
-document.querySelector('选择器');
-
-### 获取多个元素：
-
+```js
 document.querySelectorAll('选择器');
+```
 
 ### 类的操作：
 
-```
+```html
 <div class="a b c">
 </div>
 <script>
@@ -381,10 +381,10 @@ document.querySelectorAll('选择器');
 
 ### 自定义属性:
 
-我们可以通过`dataset自定义属性名`来给元素添加自定义的属性名。一旦添加完成之后。通过JS可以获取以及设置自定义属性.
+我们可以通过`dataset自定义属性名`来给元素添加自定义的属性名。一旦添加完成之后。通过 JS 可以获取以及设置自定义属性.
 
-```html
-rootDom.dataset.test = ''; // 
+```js
+rootDom.dataset.test = '';
 ```
 
 ### 文件读取:
@@ -393,42 +393,31 @@ rootDom.dataset.test = ''; //
 <input type='file' name=''>
 ```
 
-通过FileReader读取文件。读取完文件之后，会将结果存储在result属性中，而不是直接返回。
+通过 FileReader 读取文件。读取完文件之后，会将结果存储在 result 属性中，而不是直接返回。
 
-#### FileReader常用方法：
+#### FileReader 常用方法：
 
-```txt
-1.readAsBinaryString: 将文件读取为二进制编码
-2.readAsDataURL: 将文件读取为DataURL
-3.readAsText:将文件读取为文本
+```js
+//将文件读取为二进制编码
+readAsBinaryString
+// 将文件读取为DataURL
+readAsDataURL
+// 将文件读取为文本
+readAsText:
 ```
 
-#### FileReader事件：
+#### FileReader 事件：
 
-```txt
-1.onabort
-读取文件中断时触发
-2.onerror
-读取文件出错时触发
-3.onload
-读取文件完成时触发，只在读取成功后触发
-4.onloadend
-读取文件完成时触发，无论读取成功或失败都会触发
-5.onloadstart
-读取文件开始时触发
-6.onprogress
-正在读取文件
-```
+- onabort 读取文件中断时触发
+- onerror 读取文件出错时触发
+- onload 读取文件完成时触发，只在读取成功后触发
+- onloadend 读取文件完成时触发，无论读取成功或失败都会触发
+- onloadstart 读取文件开始时触发
+- onprogress 正在读取文件
 
 示例：
 
 ```html
-<!DOCTYPE html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <title>Document</title>
-</head>
-<body>
 <form action="" method="post">
   <input type="file">
 </form>
@@ -444,22 +433,18 @@ rootDom.dataset.test = ''; //
     }
   }
 </script>
-<style>
-
-</style>
-</html>
 ```
 
 #### 获取网络状态
 
-```
+```js
 window.navigator.onLine
 // true
 ```
 
 #### 获取当前定位
 
-```html
+```js
 window.navigator.geolocation
 ```
 
@@ -496,32 +481,32 @@ window.navigator.geolocation
 </script>
 ```
 
-### 本地存储
+## 本地存储
 
-HTML5 web存储，一个比cookie更好的本地存储方式。
+HTML5 web 存储，一个比 cookie 更好的本地存储方式。
 
-随着互联网的快速发展，基于网页的应用越来越普遍，同时也变得越来越复杂。为了满足各种各样的需求，会经常在本地存储大量的数据，传统方式我们会以document.cookie来进行存储，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范提出解决方案，使用sessionStorage和localStorage存储数据
+随着互联网的快速发展，基于网页的应用越来越普遍，同时也变得越来越复杂。为了满足各种各样的需求，会经常在本地存储大量的数据，传统方式我们会以 document.cookie 来进行存储，但是由于其存储大小只有 4k 左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5 规范提出解决方案，使用 sessionStorage 和 localStorage 存储数据
 
-#### localStorage
+### localStorage
 
 特点：
 
 1. 永久存储
 2. 多窗口共享
-3. 容量大约为20M
+3. 容量大约为 20M
 
-```text
+```js
 window.localStorage.setItem(key,value); //设置存储的内容
 window.localStorage.getItem(key); //获取内容
 window.localStorage.removeItem(key);//删除内容
 window.localStorage.clear(); //清空内容
 ```
 
-#### sessionStorage
+### sessionStorage
 
 1. 生命周期为关闭当前浏览器窗口
 2. 可以在同一个窗口下访问
-3. 数据大小为5M左右
+3. 数据大小为 5M 左右
 
 ```txt
 window.sessionStorage.setItem(key,value); //设置存储的内容
@@ -530,11 +515,11 @@ window.sessionStorage.removeItem(key);//删除内容
 window.sessionStorage.clear(); //清空内容
 ```
 
-### 音频audio
+## 音频 audio
 
-HTML5提供了播放音频文件的标准。直到现在，仍然不存在在网页上播放音频的标准。今天，大多数音频都是通过插件(比如Flash)来播放的。然而，并非所有浏览器都拥有同样的插件。
+HTML5 提供了播放音频文件的标准。直到现在，仍然不存在在网页上播放音频的标准。今天，大多数音频都是通过插件(比如 Flash)来播放的。然而，并非所有浏览器都拥有同样的插件。
 
-#### 基本使用
+### 基本使用
 
 ```html
 <audio controls="controls">
@@ -542,9 +527,9 @@ HTML5提供了播放音频文件的标准。直到现在，仍然不存在在网
 </audio>
 ```
 
-- controls属性添加音频的控件，播放、暂停和音量控件
-- autoplay:使音频自动播放
-- loop:使音频自动重复播放
+- controls 属性添加音频的控件，播放、暂停和音量控件
+- autoplay 使音频自动播放
+- loop 使音频自动重复播放
 
 参考内容：
 
@@ -644,9 +629,7 @@ HTML5提供了播放音频文件的标准。直到现在，仍然不存在在网
 
 ```
 
-
-
-### 视频video
+## 视频 video
 
 ```html
 <video width="800" height="" controls="">
@@ -662,7 +645,7 @@ HTML5提供了播放音频文件的标准。直到现在，仍然不存在在网
 
 `<video>` 元素支持多个 `<source>` 元素. `<source>` 元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式。
 
-##### 调用摄像头：getUserMedia() API
+### 调用摄像头：getUserMedia() API
 
 ```html
 <!DOCTYPE html>
@@ -718,49 +701,45 @@ HTML5提供了播放音频文件的标准。直到现在，仍然不存在在网
 
 ```
 
-
-
-## canvas画布
+## canvas 画布
 
 ```html
 <canvas id='canvas' width="150" height="150"></canvas>
 ```
 
-`<canvas>`看起来跟`img`标签有点像，唯一不同的是它没有src属性和alt属性。实际上，canvas标签只有两个属性:`width`和`height`。如果没有设置宽度和高度，默认的canvas会初始化`width：300px,height:150px`
+`<canvas>`看起来跟`img`标签有点像，唯一不同的是它没有 src 属性和 alt 属性。实际上，canvas 标签只有两个属性:`width`和`height`。如果没有设置宽度和高度，默认的 canvas 会初始化`width：300px,height:150px`
 
-`canvas`标签创造了一个固定大小的画布，它有一个或者多个**渲染上下文对象**，用它可以绘制和处理要展示的内容。canvas起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。`canvas`元素有一个叫做 `getContext()`的方法，这个方法是用来获得渲染上下文和它的绘画功能。`getContext()`只有一个参数。
+`canvas`标签创造了一个固定大小的画布，它有一个或者多个**渲染上下文对象**，用它可以绘制和处理要展示的内容。canvas 起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。`canvas`元素有一个叫做 `getContext()`的方法，这个方法是用来获得渲染上下文和它的绘画功能。`getContext()`只有一个参数。
 
-```html
+```js
 var canvas = document.getElementById('myCanvas');
 //获取绘画上下文对象
 var ctx = canvas.getContext('2d');
 ```
 
-### 绘制矩形常用API
+### 绘制一个填充的矩形
 
-#### 绘制一个填充的矩形
-
-```
+```js
 fillRect(x,y,width,height);
 ```
 
-#### 绘制一个矩形的边框
+### 绘制一个矩形的边框
 
-```
+```js
 strokeRect(x, y, width, height)
 ```
 
-#### 清除指定矩形区域。
+### 清除指定矩形区域。
 
-```
+```js
 clearRect(x, y, width, height)
 ```
 
-上面提供的方法之中每个都包含了相同的参数。x和y指定了canvas画布上所绘制的矩形的左上角(相对于原点)的坐标。width和height设置矩形的尺寸。
+上面提供的方法之中每个都包含了相同的参数。x 和 y 指定了 canvas 画布上所绘制的矩形的左上角(相对于原点)的坐标。width 和 height 设置矩形的尺寸。
 
-#### 填充颜色和描边颜色设置
+### 填充颜色和描边颜色设置
 
-```html
+```js
 var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 ctx.fillStyle = 'red';//填充颜色
@@ -776,71 +755,51 @@ ctx.strokeStyle = 'green';//描边颜色
 3. **然后把路径封闭**
 4. **一旦路径生成，你就能通过描边或填充路径区域来渲染图形**
 
-#### 绘制路径常用api
+### 绘制路径常用 api
 
-##### beginPath()
+#### beginPath()
 
-```
-新建一条路径，生成之后，图形绘制api被指向到路径上生成路径。无参数
-```
+新建一条路径，生成之后，图形绘制 api 被指向到路径上生成路径。无参数
 
-##### closePath()
+#### closePath()
 
-```
-闭合路径之后图形绘制api又重新指向了上下文中
-```
+闭合路径之后图形绘制 api 又重新指向了上下文中
 
-##### stroke()
+#### stroke()
 
-```
- 通过线条来绘制图形轮廓
-```
+通过线条来绘制图形轮廓
 
-##### fill()
+#### fill()
 
-```
 通过填充路径的内容区域生成实心的图形
-```
 
-##### moveTo(x,y)
+#### moveTo(x,y)
 
-```
-:将画笔移动到指定的坐标x以及y上
-```
+将画笔移动到指定的坐标 x 以及 y 上，当 `canvas` 初始化或者`beginPath()`调用后，你通常会使用`moveTo()`函数设置起点。我们也能够使用`moveTo()`绘制一些不连续的路径
 
-当canvas初始化或者`beginPath()`调用后，你通常会使用`moveTo()`函数设置起点。我们也能够使用`moveTo()`绘制一些不连续的路径
+#### lineTo(x,y)
 
-##### lineTo(x,y)
+绘制直线，绘制一条从当前位置到指定 x 以及 y 位置的直线。该方法有两个参数：x 以及 y ，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，等等。。。开始点也可以通过`moveTo()`函数改变。
 
-```
-:绘制直线，绘制一条从当前位置到指定x以及y位置的直线
-```
-
-该方法有两个参数：x以及y ，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，等等。。。开始点也可以通过`moveTo()`函数改变。
-
-##### **arc()**
+#### **arc()**
 
 绘制圆弧或者圆
 
-```
+```js
 arc(x,y,radius,startAngle,endAngle,anticlockwise);
 ```
 
-圆心在 (x, y) 位置，半径为 radius ，根据anticlockwise （默认为顺时针）指定的方向从 startAngle 开始绘制，到 endAngle 结束。anticlockwise:可选的，布尔值，如果为true，逆时针绘制圆弧，反之，顺时针绘制
+圆心在 (x, y) 位置，半径为 radius ，根据 anticlockwise （默认为顺时针）指定的方向从 startAngle 开始绘制，到 endAngle 结束。anticlockwise:可选的，布尔值，如果为 true，逆时针绘制圆弧，反之，顺时针绘制
 
-##### quadraticCurveTo(cp1x,cp1y,x,y)
+#### quadraticCurveTo(cp1x,cp1y,x,y)
 
-```txt
-绘制二次贝塞尔曲线,cp1x,cp1y为一个控制点，x,y为结束点
-```
+绘制二次贝塞尔曲线,cp1x,cp1y 为一个控制点，x,y 为结束点
 
-##### bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+#### bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 
-```txt
-绘制三次贝塞尔曲线，cp1x,cp1y为控制点一，cp2x,cp2y为控制点二，x,y为结束点。
-```
+绘制三次贝塞尔曲线，cp1x,cp1y 为控制点一，cp2x,cp2y 为控制点二，x,y 为结束点。
 
-参数x、y在两个方法中都是结束点坐标。cp1x,cp1y为坐标的第一个控制点(上图中的红色点)，cp2x,cp2y为坐标中的第二个控制点。
+参数 x、y 在两个方法中都是结束点坐标。cp1x,cp1y 为坐标的第一个控制点(上图中的红色点)，cp2x,cp2y 为坐标中的第二个控制点。
 
 <img src="https://book.apeland.cn/media/images/2019/07/15/image-20190703102603167.png" style="zoom:50%;" />
 
@@ -872,7 +831,7 @@ arc(x,y,radius,startAngle,endAngle,anticlockwise);
 </html>
 ```
 
-##### 三次贝塞尔曲线绘制
+#### 三次贝塞尔曲线绘制
 
 ```html
 /三次贝塞尔曲线
@@ -887,16 +846,17 @@ arc(x,y,radius,startAngle,endAngle,anticlockwise);
  ctx.fill();
 ```
 
-##### rect(x,y,width,height)
+#### rect(x,y,width,height)
+
 绘制矩形
 
-> 注意：当你调用fill()函数时，所有没有闭合的形状都会自动闭合，所以你需要调用closePath()函数。但是调用stroke()时不会自动闭包
+> 注意：当你调用 fill()函数时，所有没有闭合的形状都会自动闭合，所以你需要调用 closePath()函数。但是调用 stroke()时不会自动闭包
 
-##### 样式和颜色
+#### 样式和颜色
 
 - fillStyle = color:设置图形的填充颜色
 - strokeStyle = color: 设置图形边框的颜色
-- globalAlpha :设置透明度值，取值范围为0~1之间的数值
+- globalAlpha :设置透明度值，取值范围为 0~1 之间的数值
 - lineWidth = value:设置线条宽度，数值无单位
 - lineCap = type 设置线段末端的样式
   - type:butt 默认值，方形
@@ -907,9 +867,9 @@ arc(x,y,radius,startAngle,endAngle,anticlockwise);
   - type:bevel 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。
   - type: miter 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域
 
-##### 绘制文本
+#### 绘制文本
 
-canvas提供了两种方法来渲染文本
+canvas 提供了两种方法来渲染文本
 
 - `filleText(text,x,y,[,maxWidth])`
 
@@ -919,7 +879,7 @@ canvas提供了两种方法来渲染文本
 
 在指定的(x,y)位置绘制文本边框，绘制的最大宽度是可选的
 
-##### 有样式的文本
+#### 有样式的文本
 
 - `font = value`
 
@@ -939,22 +899,22 @@ canvas提供了两种方法来渲染文本
 
 ### 使用图片
 
-canvas更有意思的一项特性就是图像操作能力。可以用于动态的图像合成或者作为图形的背景，以及游戏界面（Sprites）等等。浏览器支持的任意格式的外部图片都可以使用，比如PNG、GIF或者JPEG。 你甚至可以将同一个页面中其他canvas元素生成的图片作为图片源。
+canvas 更有意思的一项特性就是图像操作能力。可以用于动态的图像合成或者作为图形的背景，以及游戏界面（Sprites）等等。浏览器支持的任意格式的外部图片都可以使用，比如 PNG、GIF 或者 JPEG。 你甚至可以将同一个页面中其他 canvas 元素生成的图片作为图片源。
 
-引入图像到canvas里需要以下两步基本操作：
+引入图像到 canvas 里需要以下两步基本操作：
 
-1. 获得一个指向`HTMLImageElement`的对象或者另一个canvas元素的引用作为源，也可以通过提供一个URL的方式来使用图片
+1. 获得一个指向`HTMLImageElement`的对象或者另一个 canvas 元素的引用作为源，也可以通过提供一个 URL 的方式来使用图片
 2. 使用`drawImage()`函数将图片绘制到画布上
 
-##### 核心方法
+#### 核心方法
 
 ```
 drawImage(imgObj,x,y,width,height,dx,dy,dWith,dHeight)
 ```
 
-其中imgObj是image或者canvas对象，x和y是在canvas里的起始坐标。后面两个参数是可选的，默认是当前画布设置的大小。这两个参数用来控制当前canvas缩放的大小。
+其中 imgObj 是 image 或者 canvas 对象，x 和 y 是在 canvas 里的起始坐标。后面两个参数是可选的，默认是当前画布设置的大小。这两个参数用来控制当前 canvas 缩放的大小。
 
-如果是8个参数，用来控制做切片显示，前四个参数是定义图像源后的切片位置和大小，后四个参数是定义切片的目标显示的位置和大小
+如果是 8 个参数，用来控制做切片显示，前四个参数是定义图像源后的切片位置和大小，后四个参数是定义切片的目标显示的位置和大小
 
 ### 状态的保存和恢复
 
@@ -964,23 +924,23 @@ drawImage(imgObj,x,y,width,height,dx,dy,dWith,dHeight)
 save()
 ```
 
-恢复canvas状态
+恢复 canvas 状态
 
 ```
 restore()
 ```
 
-save和restore方法是用来保存和恢复canvas状态的。都没有参数。
+save 和 restore 方法是用来保存和恢复 canvas 状态的。都没有参数。
 
 ### 基本动画
 
-#### 移动translate
+#### 移动 translate
 
 ```
 translate(x,y)
 ```
 
-translate方法接收两个参数。x是左右偏移量，y是上下偏移量。**在做变形之前先保存状态是良好的一个习惯**
+translate 方法接收两个参数。x 是左右偏移量，y 是上下偏移量。**在做变形之前先保存状态是良好的一个习惯**
 
 #### 旋转
 
@@ -992,10 +952,10 @@ rotate(angle)
 
 #### 步骤：
 
-1. **清空canvas** 通过`clearReact()`来清空canvas，保证自己的画布是干净的
-2. **保存canvas状态**
+1. **清空 canvas** 通过`clearReact()`来清空 canvas，保证自己的画布是干净的
+2. **保存 canvas 状态**
 3. **绘制动画图形**
-4. **恢复canvas**状态
+4. **恢复 canvas**状态
 
 #### 操控动画的方法
 
@@ -1003,7 +963,7 @@ rotate(angle)
 setInterval(functuon,delay)
 ```
 
-在设定好间隔时间后，function会定期执行
+在设定好间隔时间后，function 会定期执行
 
 ```
 setTimeout(function,delay)
@@ -1097,35 +1057,35 @@ requestAnimationFrame(callback)此方法一般每秒钟回到函数执行60次�
 
 SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素处理的，SVG 则是属于对图像的形状描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。
 
-#### 语法以及常用标签
+### 语法以及常用标签
 
-##### 1.svg标签
+#### svg 标签
 
-SVG代码都放在顶层标签`SVG`之中
+SVG 代码都放在顶层标签`SVG`之中
 
 ```html
-<svg width="100%" height="100%">  
+<svg width="100%" height="100%">
 <circle id="mycircle" cx="50" cy="50" r="50" />
 </svg>
 ```
 
-`svg`的`width`属性和`height`属性，指定SVG图像在HTML元素中所占据的宽度和高度。如果不指定，默认大小是300px宽，150px高
+`svg`的`width`属性和`height`属性，指定 SVG 图像在 HTML 元素中所占据的宽度和高度。如果不指定，默认大小是 300px 宽，150px 高
 
-##### 2.circle标签
+#### circle 标签
 
 `circle`标签代表圆形
 
 ```html
-<svg width="300" height="180">  
-    <circle cx="30"  cy="50" r="25" />  
-    <circle cx="90"  cy="50" r="25" class="red" />  
+<svg width="300" height="180">
+    <circle cx="30"  cy="50" r="25" />
+    <circle cx="90"  cy="50" r="25" class="red" />
     <circle cx="150" cy="50" r="25" class="fancy" />
 </svg>
 ```
 
 上面代码定义了三个圆。`circle`标签`cx`,`cy`,`r`属性分别为横坐标、纵坐标和半径，单位为像素。坐标都是相对于`svg`画布的左上角原点。
 
-`class`属性用来指定对应的css类
+`class`属性用来指定对应的 css 类
 
 ```css
 .red {
@@ -1144,7 +1104,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 - stroke：描边色
 - stroke-width：边框宽度
 
-##### 3.line标签
+#### line 标签
 
 `line`标签用来绘制直线
 
@@ -1158,7 +1118,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 - y2：终点的纵坐标
 - style：线段的样式
 
-##### 4.polyline标签
+#### polyline 标签
 
 绘制一根折线
 
@@ -1168,7 +1128,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<polyline>`的`points`属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。
 
-##### 5.rect标签
+#### rect 标签
 
 绘制矩形
 
@@ -1178,7 +1138,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<rect>`的`x`属性和`y`属性，指定了矩形左上角端点的横坐标和纵坐标；`width`属性和`height`属性指定了矩形的宽度和高度（单位像素）。
 
-##### 6.ellipse标签
+#### ellipse 标签
 
 绘制椭圆
 
@@ -1188,7 +1148,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<ellipse>`的`cx`属性和`cy`属性，指定了椭圆中心的横坐标和纵坐标（单位像素）；`rx`属性和`ry`属性，指定了椭圆横向轴和纵向轴的半径（单位像素）。
 
-##### 7.polygon标签
+#### polygon 标签
 
 绘制多边形
 
@@ -1198,7 +1158,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<polygon>`的`points`属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。
 
-##### 8.path标签
+#### path 标签
 
 制作路径
 
@@ -1212,7 +1172,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 - L：画直线到（lineto）
 - Z：闭合路径
 
-##### 9.text标签
+#### text 标签
 
 绘制文本
 
@@ -1222,7 +1182,7 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<text>`的`x`属性和`y`属性，表示文本区块基线（baseline）起点的横坐标和纵坐标。文字的样式可以用`class`或`style`属性指定。
 
-##### 10.use标签
+#### use 标签
 
 复制一个形状
 
@@ -1232,24 +1192,24 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<use>`的`href`属性指定所要复制的节点，`x`属性和`y`属性是`<use>`左上角的坐标。另外，还可以指定`width`和`height`坐标。
 
-##### 11.g标签
+#### g 标签
 
 用于将多个形状组成一个组(group),方便复用
 
 ```
-<g id="myCircle">    
-	<text x="25" y="20">圆形</text>    
+<g id="myCircle">
+	<text x="25" y="20">圆形</text>
 	<circle cx="50" cy="50" r="20" />
 </g>
 <use href="#myCircle" x="100" y="0" fill="blue" />
 <use href="#myCircle" x="200" y="0" fill="white" stroke="blue" />
 ```
 
-##### 12.defs标签
+#### defs 标签
 
 用于自定义形状。它内部的代码不会显示，仅供引用
 
-##### 13.image标签
+#### image 标签
 
 用于插入图片文件
 
@@ -1259,12 +1219,12 @@ SVG 的 CSS 属性与网页元素有所不同。
 
 `<image>`的`xlink:href`属性表示图像的来源。
 
-##### 14.animate标签
+#### animate 标签
 
 产生动画效果
 
 ```
-<rect x="0" y="0" width="100" height="100" fill="#feac5e">    
+<rect x="0" y="0" width="100" height="100" fill="#feac5e">
 <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
 </rect>
 ```
@@ -1277,23 +1237,23 @@ SVG 的 CSS 属性与网页元素有所不同。
 - dur：单次动画的持续时间。
 - repeatCount：动画的循环模式。
 
-##### 15.animateTransform标签
+#### animateTransform 标签
 
 ```
-<rect x="250" y="250" width="50" height="50" fill="#4bc0c8">    
+<rect x="250" y="250" width="50" height="50" fill="#4bc0c8">
 <animateTransform attributeName="transform" type="rotate" begin="0s" dur="10s" from="0 200 200" to="360 400 400" repeatCount="indefinite" />
 </rect>
 ```
 
-`<animateTransform>`的效果为旋转（`rotate`），这时`from`和`to`属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转中心的坐标。`from="0 200 200"`表示开始时，角度为0，围绕`(200, 200)`开始旋转；`to="360 400 400"`表示结束时，角度为360，围绕`(400, 400)`旋转。
+`<animateTransform>`的效果为旋转（`rotate`），这时`from`和`to`属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转中心的坐标。`from="0 200 200"`表示开始时，角度为 0，围绕`(200, 200)`开始旋转；`to="360 400 400"`表示结束时，角度为 360，围绕`(400, 400)`旋转。
 
-##### 16  参考链接
+#### 参考链接
 
 [MDNSVG]: https://developer.mozilla.org/zh-CN/docs/Web/SVG
 
 ## 拖拽/拖放
 
-拖放(drap&drop)在我们平时的工作中，经常遇到。它表示：抓取对象以后拖放到另一个位置。目前，它是HTML5标准的一部分。
+拖放(drap&drop)在我们平时的工作中，经常遇到。它表示：抓取对象以后拖放到另一个位置。目前，它是 HTML5 标准的一部分。
 
 ### 拖放的基本操作
 
@@ -1301,9 +1261,9 @@ SVG 的 CSS 属性与网页元素有所不同。
 选中=>拖动=>释放
 ```
 
-##### 选中
+#### 选中
 
-在H5标准中，为了使元素克拖动，把`draggable`属性设置为`true`。文本、图片和链接式默认可以拖放的，它们的`draggable`属性默认被设置了true。
+在 H5 标准中，为了使元素克拖动，把`draggable`属性设置为`true`。文本、图片和链接式默认可以拖放的，它们的`draggable`属性默认被设置了 true。
 
 图片和链接按住鼠标左键选中，就可以拖放。
 
@@ -1339,17 +1299,17 @@ SVG 的 CSS 属性与网页元素有所不同。
 |          | dragover  | 当被拖动元素在目标元素内时触发               |
 |          | dragleave | 当被拖动元素没有放下就离开目标元素时触发     |
 
-> 注意:dragenter和dragover事件的默认行为是拒绝接受任何被拖放的元素。因此，我们必须阻止浏览器这种默认行为。e.prevenDefault();
+> 注意:dragenter 和 dragover 事件的默认行为是拒绝接受任何被拖放的元素。因此，我们必须阻止浏览器这种默认行为。e.prevenDefault();
 
-##### 释放
+#### 释放
 
 到达目的地之后，释放元素事件
 
-| 对象     | 事件名称 | 描述                                                         |
-| -------- | -------- | ------------------------------------------------------------ |
+| 对象     | 事件名称 | 描述                                                               |
+| -------- | -------- | ------------------------------------------------------------------ |
 | 目标对象 | drop     | 当被拖动元素在目标元素里放下时触发，一般需要取消浏览器的默认行为。 |
 
-### DataTransfer对象
+## DataTransfer 对象
 
 在进行拖放操作时，`DataTransfer`对象用来保存，通过拖放操作，拖动到浏览器的数据。它可以保存一项或多项数据、一种或者多种数据类型。
 
@@ -1357,9 +1317,9 @@ SVG 的 CSS 属性与网页元素有所不同。
 event.DataTransfer
 ```
 
-##### 方法
+### 方法
 
-【1】`DataTransfer.setData()`
+#### `DataTransfer.setData()`
 
 该方法用来设置拖动操作的当前数据
 
@@ -1369,10 +1329,10 @@ event.DataTransfer
 DataTransfer.setData(format,data);
 ```
 
-- format 拖动数据的MIME类型，通常`text/plain`和`text/uri-list`
+- format 拖动数据的 MIME 类型，通常`text/plain`和`text/uri-list`
 - data 要添加的数据
 
-【2】`DataTransfer.getData()`
+#### `DataTransfer.getData()`
 
 接收指定类型的拖放数据。如果拖放行为没有操作任何数据，则返回一个空字符串。返回值是字符串类型
 
@@ -1382,13 +1342,13 @@ DataTransfer.setData(format,data);
 dataTransfer.getData(format);
 ```
 
-- format 拖动数据的MIME类型，通常`text/plain`和`text/uri-list`
+- format 拖动数据的 MIME 类型，通常`text/plain`和`text/uri-list`
 
-【3】`DataTransfer.clearData()`
+#### `DataTransfer.clearData()`
 
 删除给定类型拖动操作的数据。
 
-【4】`DataTransfer.setDragImage()`
+#### `DataTransfer.setDragImage()`
 
 可以使用该方法来拖拽图片
 
@@ -1402,7 +1362,7 @@ DataTransfer.setDragImage(img,xOffset,yOffset)
 - xOffset :图片的横向偏移量
 - yOffset: 图片的纵向偏移量
 
-#### 定义拖动效果
+### 定义拖动效果
 
 `dropEffect`属性可以定义完成具体的效果
 

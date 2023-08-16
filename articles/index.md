@@ -1,17 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: page
-hero:
-  name: "Lvzl Blog"
-  text: "write something!"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /
-    - theme: alt
-      text: API Examples
-      link: /
 ---
 
 <div id="main-page">
@@ -65,6 +54,7 @@ const show = ref(true)
 let currentTag = ref('')
 const originCopy = [...origin]
 const article = reactive([])
+
 function filterArticleByTag(tag) {
   if (currentTag.value === tag) {
     article.splice(0, article.length, ...originCopy)

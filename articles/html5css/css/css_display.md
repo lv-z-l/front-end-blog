@@ -14,8 +14,8 @@ prev: false
 
 **内联元素(inline)特性：也叫行内元素**
 
-- 和相邻的内联元素在同一行;
-- 宽度(width)、高度(height)、内边距的 top/bottom(padding-top/padding-bottom)和外边距的 top/bottom(margin-top/margin-bottom)都不可改变，就是里面文字或图片的大小;
+- 和相邻的内联元素在同一行。
+- 宽度(width)、高度(height)、padding-top/padding-bottom 和 margin-top/margin-bottom 设置无效，就是里面文字或图片的大小。
 
 **块级元素主要有：**
 
@@ -25,9 +25,65 @@ address , blockquote , center , dir , div , dl , fieldset , form , h1 , h2 , h3 
 
 a , abbr , acronym , b , bdo , big , br , cite , code , dfn , em , font , i , img , input , kbd , label , q , s , samp , select , small , span , strike , strong , sub , sup ,textarea , tt , u , var
 
-## 隐藏元素 - display:none 或 visibility:hidden
+## 隐藏元素
 
-隐藏一个元素可以通过把 display 属性设置为"none"，或把 visibility 属性设置为"hidden"。
+1. **CSS 属性 `display: none;`：**
+   这是最常见和简单的隐藏元素的方式之一。通过设置 `display: none;`，元素会被完全从页面布局中移除，并且不会占据空间。
 
-- visibility:hidden 可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。
-- display:none 可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。
+   ```css
+   .hidden-element {
+     display: none;
+   }
+   ```
+
+   特点：
+
+   - 元素不占用空间，对布局没有影响。
+   - 不会触发元素的渲染和交互事件。
+   - 可以通过 JavaScript 动态地切换元素的显示与隐藏。
+
+2. **CSS 属性 `visibility: hidden;`：**
+   使用 `visibility: hidden;` 可以隐藏元素，但元素仍然占据空间，不会改变布局。
+
+   ```css
+   .hidden-element {
+     visibility: hidden;
+   }
+   ```
+
+   特点：
+
+   - 元素仍占用空间，对布局有影响。
+   - 不会触发元素的渲染和交互事件。
+   - 适用于需要占位但暂时隐藏的元素。
+
+3. **CSS 属性 `opacity: 0;`：**
+   通过将元素的不透明度设置为 0，可以隐藏元素，但仍然会占据空间，并影响布局。
+
+   ```css
+   .hidden-element {
+     opacity: 0;
+   }
+   ```
+
+   特点：
+
+   - 元素仍占用空间，对布局有影响。
+   - 元素在渲染时会被处理，可能会影响性能。
+   - 可以通过 CSS 动画实现渐变隐藏和显示效果。
+
+4. **CSS 属性 `position: absolute; left: -9999px;`：**
+   将元素移出可视区域，通常结合绝对定位来实现。
+
+   ```css
+   .hidden-element {
+     position: absolute;
+     left: -9999px;
+   }
+   ```
+
+   特点：
+
+   - 元素不占用空间，对布局没有影响。
+   - 可以在屏幕外使用，但需要注意滚动问题。
+   - 适用于需要在 DOM 结构中保留元素，但不需要显示的情况。
