@@ -3,13 +3,18 @@ title: 前端路由
 author: lvzl
 ---
 
+<script setup>
+  import XmindViewer from '@/XmindViewer'
+</script>
 
 ## 概念
-<img src="@pic/webrouter.png" />
+
+<XmindViewer url="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/xmind/router.xmind"/>
 
 ## 实现
 
-### 实现Base类
+### 实现 Base 类
+
 ```js
 export default class Base {
   constructor(option) {
@@ -31,7 +36,7 @@ export default class Base {
 }
 ```
 
-### 基于hash的简单实现
+### 基于 hash 的简单实现
 
 ```js
 import Base from './Base.js'
@@ -64,7 +69,8 @@ export default class Hash extends Base {
 }
 
 ```
-### 基于history的简单实现
+
+### 基于 history 的简单实现
 
 ```js
 import Base from './Base.js'
@@ -103,7 +109,7 @@ export default class History extends Base {
 
 ```
 
-### 实现Router类
+### 实现 Router 类
 
 ```js
 import History from './history.js'
@@ -120,7 +126,7 @@ export default class Router {
 }
 ```
 
-### 简单写个html测试下
+### 简单写个 html 测试下
 
 ```html
 <!DOCTYPE html>
@@ -172,10 +178,13 @@ export default class Router {
   </script>
 </html>
 ```
+
 ## 效果
 
-### 基于history
-<img src="@pic/history.gif" />
+### 基于 history
 
-### 基于hash
-<img src="@pic/hash.gif" />
+<img src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/history.gif" />
+
+### 基于 hash
+
+<img src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/hash.gif" />

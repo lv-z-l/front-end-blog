@@ -1,5 +1,5 @@
 module.exports = {
   navText: 'HTML & CSS',
-  sideText: ['CSS', 'HTML'],
-  sort: 1
+  sideText: ['CSS'],
+  sort: 1,
 }

@@ -9,9 +9,9 @@ layout: page
       @click="filterArticleByTag(tag)" :color="tagColors[tag]">{{ tag }}</tag>
   </div>
   <img class="drone"
-    :src="drone" />
+    src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/hero-drone.webp" />
   <img class="cat"
-    :src="cat" />
+    src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/astrocat.png" />
   <div :class="['article-time-line', show ? 'show' : 'hidden']">
     <div class="time-line">
       <time-line-item v-for="item in article" v-bind="item">
@@ -39,8 +39,6 @@ layout: page
 import { reactive, ref } from 'vue'
 import Rail from '@/Rail'
 import { origin, tagColors } from './timelines'
-import cat from '../.vitepress/public/assets/astrocat.png'
-import drone from '../.vitepress/public/assets/hero-drone.webp'
 import TimeLineItem from '@/TimeLineItem'
 import Tag from '@/Tag'
 
@@ -73,7 +71,7 @@ article.push(...originCopy)
 <style>
 #main-page {
   height: calc(100vh - 64px);
-  background-image: url('../.vitepress/public/assets/hero-bg-2x.webp');
+  background-image: url('https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/hero-bg-2x.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

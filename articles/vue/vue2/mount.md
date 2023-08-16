@@ -2,4 +2,9 @@
 title: Vue挂载的实现
 author: lvzl
 ---
-<img src="@pic/mount.svg" />
+
+<script setup>
+  import XmindViewer from '@/XmindViewer'
+</script>
+
+<XmindViewer url="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/xmind/vue-mount.xmind"/>
