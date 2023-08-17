@@ -17,6 +17,7 @@ export default defineConfig({
       alias: {
         '@': path.resolve(__dirname, '../components'),
         '@pic': path.resolve(__dirname, 'public/assets'),
+        '@use': path.resolve(__dirname, '../use'),
       },
       extensions: ['.vue', '.js', '.json'],
     },

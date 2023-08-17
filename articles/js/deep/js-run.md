@@ -3,6 +3,11 @@ title: JS异步执行机制
 author: lvzl
 ---
 
+<script setup>
+  import useFancybox from '@use/useFancybox.js'
+  useFancybox()
+</script>
+
 ## JS 异步执行机制
 
 在 js 执行过程中有 **微任务** 和 **宏任务** 之分, 且 JS 在执行下一个宏任务之前会保证微任务队列为空。
@@ -17,7 +22,7 @@ author: lvzl
 
 ## demo
 
-```javascript
+```js
 const { log } = console;
 log(1); // 首先呢，JS代码是从上至下逐行执行，到这里先打印 1
 setTimeout(() => { // 到了这里，遇到了异步任务，把异步操作加到异步队列中，然后接着往下执行JS代码
@@ -70,7 +75,7 @@ console.log(1);
 
 ## 流程图
 
-<img src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/js-run-async.jpg" />
+<img data-fancybox="gallery"  src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/js-run-async.jpg" />
 
 ## 参考
 
