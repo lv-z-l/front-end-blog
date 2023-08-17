@@ -111,6 +111,10 @@ article.push(...originCopy)
   display: flex;
 }
 
+.time-line {
+  width: 100%;
+}
+
 .time-line-content{
     display: -webkit-box;
     overflow: hidden;
