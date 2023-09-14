@@ -1,17 +1,11 @@
----
-home: true
-heroImage: /assets/img/tiger.jpg
-heroText: Welcome
-tagline: 🌹🌹🌹
-actionLink: /resume/index
-actionText: RESUME →
-
-features:
-- title: 爱岗
-  details: 敬业
-- title: 和谐
-  details: 友善
-- title: 文明
-  details: 富强
-footer: MIT Licensed | Copyright © 2018-present Evan You
----
+- 🧑🏼‍💻 Record the learning content here
+  include:
+  - 😀 Knowledge of web front-end (HTML, CSS, JavaScript)
+  - 😃 Vue delves into learning
+  - 😄 Content sharing in work
+  - 😆 Tips for working
+  - 😅 sync juejin articles
+- 📇 Contact me: better-lvzl@foxmail.com
+- 🔥 Access address: https://lv-z-l.github.io/front-end-blog/
+- 💥 juejin: https://juejin.cn/user/1055186511205390
+  
