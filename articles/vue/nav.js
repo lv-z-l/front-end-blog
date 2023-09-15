@@ -1,5 +1,5 @@
 module.exports = {
   navText: 'Vue',
-  sideText: ['Vue2'],
+  sideText: ['Vue Router', 'Vue2', 'Vuex'],
   sort: 5,
 }
