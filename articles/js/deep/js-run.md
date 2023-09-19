@@ -45,6 +45,7 @@ setTimeout(() => {
     console.log('set1 ')
     new Promise((resolve, reject) => {
         console.log('pr1 ')
+        resolve()
     }).then(() => {
         console.log('then1 ');
     })
@@ -56,12 +57,14 @@ setTimeout(() => {
 
 new Promise((resolve, reject) => {
     console.log('pr2 ')
+    resolve()
 }).then(() => {
     console.log('then2 ');
 })
 
 new Promise((resolve, reject) => {
     console.log('pr3 ')
+    resolve()
     setTimeout(() => {
         console.log('set3 ');
     })

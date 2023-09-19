@@ -20,7 +20,7 @@ instance.interceptors.response.use(function (response) {
   }, function (error) {
     // 超出 2xx 范围的状态码都会触发该函数。
     // 对响应错误做点什么
-    if(error.response.status === '401' && !isRefreshToken()) { // 代表过期了，这里要排除刷新token的请求
+    if(error.response.status === '401' && !isRefreshToken(error.config)) { // 代表过期了，这里要排除刷新token的请求
       const refreshRes = await refreshToken()
       if(refreshRes) {
         error.config.Authorization = 'Bearer ' + getRefreshToken() // 一定要获取新的token，更新之前失败请求的token
