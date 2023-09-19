@@ -60,3 +60,53 @@ function partition(arr, left, right) {
 
 const swap = (arr, i, j) => [arr[i], arr[j]] = [arr[j], arr[i]]
 ```
+
+
+这样也行：
+```js
+// 简单说： 找到一个数作为参考，比这个数字大的放在数字左边，比它小的放在右边； 然后分别再对左边和右变的序列做相同的操作:
+//（1）选择一个基准元素，将列表分割成两个子序列；
+//（2）对列表重新排序，将所有小于基准值的元素放在基准值前面，所有大于基准值的元素放在基准值的后面；
+//（3）分别对较小元素的子序列和较大元素的子序列重复步骤1和2
+function quickSort(arr) {
+  const swap = (arr, i, j) => [arr[i], arr[j]] = [arr[j], arr[i]]
+  if(arr.length <= 1) return arr
+  const mid = Math.floor((arr.length - 1) / 2)
+  let i = 0, j = arr.length - 1
+  while(i <= j) {
+    while(arr[i] < arr[mid]) { // 找到 左侧 比这个中间值大的
+      i++
+    }
+    while(arr[j] > arr[mid]) { // 找到 右侧 比这个中间值小的
+      j--
+    }
+    if(i <= j) {
+      swap(arr, i, j) // 交换左右两侧
+      i++
+      j--
+    }
+  }
+  const left = quickSort(arr.slice(0, i)) // 递归去处理
+  const right = quickSort(arr.slice(i))
+  return left.concat(right)
+}
+```
+
+还可以这样：
+```js
+function quickSort(arr) {
+  if(arr.length <= 1) return arr
+  const mid = Math.floor(arr.length / 2)
+  const left = []
+  const right = []
+  const midVal = arr.splice(mid, 1)
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] < midVal) {
+      left.push(arr[i])
+    } else {
+      right.push(arr[i])
+    }
+  }
+  return quickSort(left).concat(midVal, quickSort(right))
+}
+```
