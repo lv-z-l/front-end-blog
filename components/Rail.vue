@@ -10,8 +10,8 @@ let show = ref(true)
 const emit = defineEmits(['visible-change'])
 
 function onRailClick() {
-  show.value = !show.value
-  emit('visible-change', show.value)
+  emit('visible-change', !show.value)
+  setTimeout(() => show.value = !show.value, 1000)
 }
 </script>
 <style>

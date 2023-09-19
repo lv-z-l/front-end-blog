@@ -16,6 +16,7 @@ const emits = defineEmits(['click'])
 .tag {
   white-space: nowrap;
   margin-right: 8px;
+  margin-top: 14px;
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
