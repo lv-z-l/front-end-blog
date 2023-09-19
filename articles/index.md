@@ -88,7 +88,7 @@ article.push(...originCopy)
   top: 32px;
   width: 160px;
   height: 104px;
-  animation: upDown 5s linear alternate infinite forwards;
+  /* animation: upDown 5s linear alternate infinite forwards; */
 }
 
 .cat {
@@ -129,11 +129,11 @@ article.push(...originCopy)
 
 .article-time-line,
 .space {
-  transition: left .6s linear;
+  transition: left .4s ease-in-out;
 }
 
 .space {
-  margin: 15px 64px;
+  margin: 0 64px 14px 64px;
   position: absolute;
   width: calc(100% - 300px);
   left: 0;

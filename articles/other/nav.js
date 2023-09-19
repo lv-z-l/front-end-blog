@@ -1,4 +1,4 @@
 module.exports = {
   navText: '更多',
-  sort: 8
+  sort: 10
 }
