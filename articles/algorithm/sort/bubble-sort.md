@@ -58,6 +58,7 @@ function bubbleSort(arr) {
   for(let i = 0; i < l; i++) {
     for(let j = 0; j < l - 1 - i; j++) {
       if(arr[j] > arr[j+1]) {
+        flag = true
         [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
       }
     }
