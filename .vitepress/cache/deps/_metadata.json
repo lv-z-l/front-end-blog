@@ -1,35 +1,23 @@
 {
-  "hash": "5e286541",
-  "browserHash": "4428f65d",
+  "hash": "5eec9526",
+  "browserHash": "bafb1687",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/.pnpm/vue@3.3.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "ebc95804",
+      "fileHash": "b6d8aaa7",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/.pnpm/@vue+devtools-api@6.5.0/node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "bacd3d77",
+      "fileHash": "4f3a99fb",
       "needsInterop": false
     },
     "@theme/index": {
       "src": "../../../node_modules/.pnpm/vitepress@1.0.0-beta.5_@algolia+client-search@4.18.0_@types+node@20.4.2_search-insights@2.7.0/node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "f4d2ee12",
-      "needsInterop": false
-    },
-    "@fancyapps/ui": {
-      "src": "../../../node_modules/.pnpm/registry.npmmirror.com+@fancyapps+ui@5.0.22/node_modules/@fancyapps/ui/dist/index.esm.js",
-      "file": "@fancyapps_ui.js",
-      "fileHash": "0fefbb61",
-      "needsInterop": false
-    },
-    "xmind-embed-viewer": {
-      "src": "../../../node_modules/.pnpm/xmind-embed-viewer@1.1.0/node_modules/xmind-embed-viewer/dist/esm/index.js",
-      "file": "xmind-embed-viewer.js",
-      "fileHash": "27de47a5",
+      "fileHash": "1dcd32d5",
       "needsInterop": false
     }
   },
