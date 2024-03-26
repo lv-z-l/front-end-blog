@@ -7,7 +7,6 @@ author: lvzl
 
 ## 什么是 React
 **React 是 Facebook 推出的一个用于构建用户界面的 JavaScript 库。**
-**React 是一个用于构建 UI 的 JavaScript 库，它是 Facebook 开源。**
 
 
 ## React 特点
