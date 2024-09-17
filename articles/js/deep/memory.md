@@ -30,7 +30,7 @@ author: lvzl
 
 32 位：新生代 16MB 老生代 700MB
 
-<img data-fancybox="gallery" src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/V8_memory.png" />
+<img data-fancybox="gallery" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//V8_memory.png" />
 
 ## 新生代内存
 
@@ -86,7 +86,7 @@ for (let i = 0; i < 15; i++) {
 }
 ```
 
-<img data-fancybox="gallery" src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/image-20210108111222746.png" />
+<img data-fancybox="gallery" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//image-20210108111222746.png" />
 
 在通过一个小例子来看下 JS 回收临时变量的过程：
 
@@ -115,7 +115,7 @@ setInterval(() => {
 ```
 
 看图中圈出部分，已经进行了临时变量的回收。
-<img data-fancybox="gallery" src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/image-20210108112442102.png" />
+<img data-fancybox="gallery" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//image-20210108112442102.png" />
 
 ## 开发应该注意些什么
 

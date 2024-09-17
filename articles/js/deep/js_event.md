@@ -47,7 +47,7 @@ author: lvzl
 </body>
 ```
 
-<img data-fancybox="gallery"  src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/dom1-event.png" />
+<img data-fancybox="gallery"  src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//dom1-event.png" />
 
 点击 `li` 元素，将依次打印: `li => ul => body`，这种通过`attachEvent`定义事件监听就是 `IE` 事件模型。
 
@@ -77,6 +77,6 @@ author: lvzl
   </script>
 </body>
 ```
-<img data-fancybox="gallery"  src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/dom2-event.png" />
+<img data-fancybox="gallery"  src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//dom2-event.png" />
 
 这种通过`addEventListener`定义事件监听就是 `DOM2` 级事件模型。

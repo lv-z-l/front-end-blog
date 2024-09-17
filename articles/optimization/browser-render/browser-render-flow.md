@@ -3,7 +3,7 @@ title: 浏览器运行机制
 author: lvzl
 ---
 
-<img data-fancybox="gallery" src="https://mp-cb2e47ef-a802-469a-a81c-2b6efa9f8b60.cdn.bspapp.com/blog-resource/images/browser-run.png"/>
+<img data-fancybox="gallery" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//browser-run.png"/>
 
 <script setup>
   import useFancybox from '@use/useFancybox.js'
