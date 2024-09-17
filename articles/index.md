@@ -8,10 +8,6 @@ layout: page
     <tag v-for="tag in Object.keys(tagColors)" :class="[currentTag === tag ? 'current-tag' : '']"
       @click="filterArticleByTag(tag)" :color="tagColors[tag]">{{ tag }}</tag>
   </div>
-  <img class="drone"
-    src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//hero-drone.webp" />
-  <img class="cat"
-    src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//astrocat.png" />
   <div :class="['article-time-line', show ? 'show' : 'hidden']">
     <div class="time-line">
       <time-line-item v-for="item in article" v-bind="item">
@@ -82,25 +78,8 @@ article.push(...originCopy)
   -o-background-size: cover;
 }
 
-.drone {
-  position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 160px;
-  height: 104px;
-  /* animation: upDown 5s linear alternate infinite forwards; */
-}
-
-.cat {
-  position: absolute;
-  right: 0px;
-  bottom: 32px;
-  width: 300px;
-  height: 303px;
-}
-
 .article-time-line {
-  width: calc(100% - 300px);
+  width: 100%;
   padding: 16px 64px 64px 64px;
   height: calc(100% - 120px);
   position: absolute;
@@ -124,7 +103,7 @@ article.push(...originCopy)
 }
 
 .article-time-line.hidden {
-  left: calc(0px - 100% + 300px);
+  left: -100%;
 }
 
 .article-time-line,
@@ -135,7 +114,7 @@ article.push(...originCopy)
 .space {
   margin: 0 64px 14px 64px;
   position: absolute;
-  width: calc(100% - 300px);
+  width: 100%;
   left: 0;
   display: flex;
   justify-content: flex-start;
@@ -159,15 +138,5 @@ article.push(...originCopy)
 .color-span {
   padding-right: 16px;
   cursor: pointer;
-}
-
-@keyframes upDown {
-  0% {
-    top: 0;
-  }
-
-  100% {
-    top: 64px
-  }
 }
 </style>
