@@ -168,7 +168,7 @@ React.createElement = (tag, attrs, ...children) => {
 }
 ```
 那是什么把jsx 转换成 React.createElement 的呢？一想到转换，那跟 Babel 就扯上关系了(@babel/preset-react)。
-<img width="50%" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//iScreen Shoter - Google Chrome - 231217220102.jpg">
+<img width="50%" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images/babel-preset-reacct.png">
 
 React 函数组件的基本格式如下：
 
