@@ -3,12 +3,12 @@
 layout: page
 ---
 
-<div id="main-page">
-  <div :class="['space', show ? 'show' : 'hidden']">
+<div id="main-page" :class="[show ? 'show' : 'hidden']">
+  <div class="space">
     <tag v-for="tag in Object.keys(tagColors)" :class="[currentTag === tag ? 'current-tag' : '']"
       @click="filterArticleByTag(tag)" :color="tagColors[tag]">{{ tag }}</tag>
   </div>
-  <div :class="['article-time-line', show ? 'show' : 'hidden']">
+  <div class="article-time-line">
     <div class="time-line">
       <time-line-item v-for="item in article" v-bind="item">
         <template v-slot:header>
@@ -72,20 +72,18 @@ article.push(...originCopy)
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  overflow: auto;
   position: relative;
+  left: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  transition: left .4s ease-in-out;
 }
 
 .article-time-line {
   width: 100%;
   padding: 16px 64px 64px 64px;
-  height: calc(100% - 120px);
-  position: absolute;
-  left: 0;
-  top: 120px;
-  overflow: auto;
   border-radius: 12px;
   display: flex;
 }
@@ -102,20 +100,14 @@ article.push(...originCopy)
     -webkit-line-clamp: 2;
 }
 
-.article-time-line.hidden {
-  left: -100%;
-}
-
-.article-time-line,
 .space {
-  transition: left .4s ease-in-out;
-}
-
-.space {
-  margin: 0 64px 14px 64px;
-  position: absolute;
+  padding: 0 64px 14px 64px;
+  position: sticky;
+  z-index: 1;
   width: 100%;
   left: 0;
+  top: 0;
+  background-color: var(--vp-c-bg);
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -127,8 +119,8 @@ article.push(...originCopy)
   margin: 0;
 }
 
-.space.hidden {
-  left: -100%
+#main-page.hidden {
+  left: -100%;
 }
 
 .current-tag::before {
