@@ -22,7 +22,7 @@ const attrs = useAttrs()
 </script>
 <style>
 .color {
-  color: #fff;
+  color: var(--vp-c-text-1);
 }
 
 .timeline {
@@ -35,7 +35,7 @@ const attrs = useAttrs()
 }
 
 .timeline:not(:first-child) {
-  border-top: 1px solid #e4e6eb;
+  border-top: 1px solid var(--vp-c-text-1);
   padding-top: 6px;
 }
 
@@ -45,8 +45,7 @@ const attrs = useAttrs()
   width: 120px;
   height: 80px;
   margin-left: 24px;
-  background-color: #fff;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .timeline-wrapper {
