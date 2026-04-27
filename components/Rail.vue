@@ -9,10 +9,25 @@ import { ref } from 'vue'
 let show = ref(true)
 const emit = defineEmits(['visible-change'])
 
-function onRailClick() {
-  emit('visible-change', !show.value)
-  setTimeout(() => show.value = !show.value, 1000)
+const debounce = (fn, time) => {
+  let timer = null;
+  return (...argu) => {
+    if(timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(() => {
+      fn.apply(null, argu)
+      clearTimeout(timer)
+      timer = null
+    }, time)
+  }
 }
+
+const onRailClick = () => {
+  emit('visible-change', !show.value)
+  show.value = !show.value
+}
+
 </script>
 <style>
 .rail {
