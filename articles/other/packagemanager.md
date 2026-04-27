@@ -7,4 +7,4 @@ author: lvzl
   import XmindViewer from '@/XmindViewer'
 </script>
 
-<XmindViewer url="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/xmind/npm-yarn-pnpm.xmind"/>
+<XmindViewer url="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/xmind/npm-yarn-pnpm.xmind"/>

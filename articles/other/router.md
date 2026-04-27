@@ -9,7 +9,7 @@ author: lvzl
 
 ## 概念
 
-<XmindViewer url="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/xmind/router.xmind"/>
+<XmindViewer url="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/xmind/router.xmind"/>
 
 ## 实现
 
@@ -183,8 +183,8 @@ export default class Router {
 
 ### 基于 history
 
-<img src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//history.gif" />
+<img src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//history.gif" />
 
 ### 基于 hash
 
-<img src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//hash.gif" />
+<img src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//hash.gif" />

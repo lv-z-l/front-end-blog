@@ -78,7 +78,7 @@ console.log(1);
 
 ## 流程图
 
-<img data-fancybox="gallery"  src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//js-run-async.jpg" />
+<img data-fancybox="gallery"  src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//js-run-async.jpg" />
 
 ## 参考
 

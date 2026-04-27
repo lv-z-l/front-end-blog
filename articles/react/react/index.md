@@ -6,15 +6,17 @@ author: lvzl
 # React 学习总结
 
 ## 什么是 React
+
 **React 是 Facebook 推出的一个用于构建用户界面的 JavaScript 库。**
 
-
 ## React 特点
+
 - 声明式：React 采用声明式编程，可以让你将 UI 组件看作是函数或类，而不是对象。
 - 组件化：React 组件让你将 UI 拆分成独立的、可重用的代码块，并将它们组合成更大的 UI。
 - 高效：React 通过对 DOM 的模拟，最大限度地减少与 DOM 的交互
 
 ## React 类组件及其生命周期（不推荐使用）
+
 **React 类组件开发如下，只需要了解即可，现在都函数组件开发**
 
 ```jsx
@@ -106,12 +108,15 @@ class ComponentName extends React.Component {
 ```
 
 ## React函数组件（推荐使用）
+
 函数组件使用 `JSX` 的语法开发，说的简单些，JSX 其实就是在 html（或者说是模版） 中能够写 js，但并不是使用 script 标签那种方式，而是使用 `{}`, 在`{}`中可以写任何的js表达式或语法。
 
 ### 那 `JSX` 的本质是什么？
+
 先看一个例子，一个最简单的例子，我们通过对比这个例子的 开发态 和 运行态 来看看JSX的本质到底是什么。
 
 开发态：
+
 ```jsx
 const Test = function () {
   const [count, setCount] = useState(0);
@@ -128,6 +133,7 @@ ReactDom.render(<Test />, document.getElementById('app'));
 ```
 
 运行态：
+
 ```js
 const Test = function () {
   const [count, setCount] = useState(0);
@@ -144,6 +150,7 @@ ReactDom.render( /*#__PURE__*/React.createElement(Test, null), document.getEleme
 ```
 
 不难观察出，开发态 和 运行态 的区别就是在 JSX 的节点，`<div></div>`变成了 `React.createElement('div', attrs, child)`。不难猜出`React.createElement`的实现应该大致如下所示：
+
 ```js
 React.createElement = (tag, attrs, ...children) => {
   if (typeof tag === 'string') {
@@ -167,8 +174,9 @@ React.createElement = (tag, attrs, ...children) => {
   }
 }
 ```
+
 那是什么把jsx 转换成 React.createElement 的呢？一想到转换，那跟 Babel 就扯上关系了(@babel/preset-react)。
-<img width="50%" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images/babel-preset-reacct.png">
+<img width="50%" src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/babel-preset-reacct.png">
 
 React 函数组件的基本格式如下：
 
@@ -192,6 +200,7 @@ export default function ComponentName(props) {
 Hooks 是 React 16.8 的新增特性，它可以让我们通过函数组件的方式开发 `React` 应用，并可以使用 `state` 以及其他 `React` 特性。
 
 ### useState
+
 `useState`用于声明一个状态，并返回一个数组，数组的第一个元素是状态的值，第二个元素是更新状态的函数。在`React`中，所有的状态更新都需要通过`setState`方法来进行，`setState`方法可以接收一个函数，这个函数会接收当前的`state`作为参数，并返回一个新的`state`；也可以直接接收一个新的`state`。(**需要注意这个 新的，意味着如果是对象、数组等引用类型，需要返回一个新的**)
 
 ```jsx
@@ -203,7 +212,9 @@ setState('Hello Hooks!');
 // 触发更新，传递一个函数
 setState(prevState => prevState +'Hooks!');
 ```
+
 **简单理解，useState 用于在 React 中声明像 Vue data 选项中的属性**
+
 - Vue: @xxx -> this.xxx = xxx -> get/set -> notify -> watcher.update -> render -> 界面更新
 - React: onXxx -> setState -> React更新逻辑 -> 界面更新
 
@@ -225,6 +236,7 @@ export default function ComponentName() {
 ```
 
 #### 对象的 setState
+
 ```jsx
 // 扁平的对象
 const [obj, setObj] = useState({
@@ -273,7 +285,9 @@ setObj(draft => {
 ```
 
 #### 数组的 setState
+
 需要返回一个新的数组，因此：
+
 - `push pop shift unshift reverse sort splice` 等方法都不推荐使用，因为他们改变的是原始的数组，不会返回新的数组。
 - `concat slice filter map [...arr]` 会返回新的数组，是推荐的做法。
 
@@ -289,7 +303,9 @@ setArr(draft => {
 ```
 
 ### useRef
+
 **当你需要组件“记住”某些信息，但又不想让这些信息 触发新的渲染 时，你可以使用 useRef。**
+
 - 使用`useRef`创建的变量，在组件的生命周期内一直存在，并且他的值具有缓存的特性，不会在每次渲染后变为初始值。
 - 可以改变，并且改变不会触发组件重新渲染。
 - 在一个节点中使用`ref={useRef返回的变量}`，在组件的生命周期内，`ref.current` 指向该节点`DOM`对象。
@@ -321,9 +337,11 @@ export default function ComponentName() {
 ```
 
 #### forwardRef
+
 useRef只能用在当前组件内的节点上，那如果咱们想获取到子组件的某个节点DOM对象的引用呢？那就可以使用 forwardRef。
 
 使用 forwardRef 包裹子组件，然后可以将父组件绑定在该子组件上的 ref 拿到，然后绑定到 子组件内的任意节点上，这样父组件的 ref 就能拿到子组件的 DOM 节点了。示例如下：
+
 ```jsx
 import React, { forwardRef, useRef } from'react';
 
@@ -362,18 +380,25 @@ export default function FunctionComp() {
 ```
 
 ### useEffect
+
 #### 什么是effect？
+
 在React中，有两种逻辑：组件的渲染逻辑、事件处理程序。
+
 #### 怎么理解？
+
 - 组件的渲染逻辑：React组件是一个函数，这个函数的执行逻辑 就是 渲染逻辑。
 - 事件处理程序：在React将组件渲染到页面之后，用户的一些操作可能会触发一些事件处理程序，比如用户点击按钮、输入框输入内容等。
+
 #### 什么是effect？
+
 指由渲染本身引起的，而不是由用户触发特定事件 的副作用。比如你用到了外部的一些插件（各种编辑器，图表、创建连接等），你可能需要在渲染完成之后执行这些插件的初始化逻辑，或者创建连接，这时候就可以使用 useEffect。
 
 **不要随意在组件中使用useEffect，我们需要明确其使用场景：暂时跳出React代码，与React外部（这包括浏览器 API、第三方小部件，以及网络等等）交互。**
 **如果只是想根据组件内的某些状态的变更 去改变另外的某些状态，那么你可能不需要使用useEffect。**
 
 #### 如何使用useEffect?
+
 ```jsx
 useEffect(() => {
   // do sth
@@ -408,31 +433,40 @@ useEffect(() => {
 ```
 
 #### 使用useEffect的经典场景
+
 - 添加事件监听
 - fetch数据
 - 初始化第三方插件
 - 初始化设置样式、动画等
 
 #### 不需要使用useEffect的场景
+
 - 根据 prop 或 state 的变更，更新另外的一些state（官方文档中有几个例子很好理解）
 - 能在事件处理函数中处理的，就不要拿到 useEffect 中执行，可能导致一些预期之外的bug。
 - 不要把只需要执行一次，与组件的重新渲染无关的逻辑放到useEffect中。
 - 不要在useEffect中通知父组件状态的变更，因为这个执行的时机太晚了。（状态变更->重新渲染->执行useEffect回调->父组件函数执行->状态变更->重新渲染）
 
 ### useLayoutEffect
+
 useLayoutEffect 是 useEffect 的一个版本，在浏览器重新绘制屏幕之前触发，会阻塞浏览器的绘制。
+
 ```jsx
 useLayoutEffect(setup, dependencies?)
 ```
+
 用处：在浏览器重新绘制屏幕前计算布局，在某些计算布局的场景下使用 useEffect 可能会出现闪烁的问题，使用 useLayoutEffect 则不会。
 
 ### useMemo
+
 组件重新渲染的时候能够缓存计算的结果，避免重复计算以提升性能。
+
 ```jsx
 // 是否重新计算取决于 dependencies 是否发生变化
 const cachedValue = useMemo(() => calcValue, dependencies)
 ```
+
 缓存一个计算的值，并且这个计算的过程很耗时的情况下，效果会比较显著
+
 ```jsx
 import React, { useMemo } from'react';
 
@@ -450,7 +484,9 @@ function FunctionComp({todos, filter, name}) {
 
 export default FunctionComp;
 ```
+
 也可以直接缓存一个组件/DOM元素，当且仅当这个组件/DOM元素使用到的状态变更才会重新渲染它.
+
 ```jsx
 import React, { useMemo } from'react';
 
@@ -467,7 +503,9 @@ function FunctionComp({todos, filter, name}) {
 ```
 
 #### React.memo
+
 `React.memo`用于缓存一个组件，只有这个组件接收的props变化时才会重新渲染它，也是`React`中的一种性能优化手段，可以避免一些组件不必要的重复渲染。举一个简单的例子：
+
 ```jsx
 import React from'react';
 
@@ -489,7 +527,9 @@ function FunctionComp({name, childText}) {
 
 export default FunctionComp;
 ```
+
 `React.memo`还有第二个参数，一个函数，可由开发者自行指定是否需要重新渲染组件。
+
 ```jsx
 const MemoChild = React.memo(Child, (prevProps, nextProps) => {
   return prevProps.childText === nextProps.childText
@@ -497,14 +537,17 @@ const MemoChild = React.memo(Child, (prevProps, nextProps) => {
 ```
 
 ### useCallback
+
 用于缓存函数本身，只有当依赖项变化，才会重新创建一个新的函数返回。
 
 用法：
+
 ```jsx
 const handleClick = useCallback(fn, dependencies)
 ```
 
 没有使用 useCallback 的时候：
+
 ```jsx
 import React from'react';
 
@@ -526,7 +569,9 @@ function FunctionComp({name, childText}) {
 
 export default FunctionComp;
 ```
+
 加上useCallback:
+
 ```jsx
 import React, { useCallback } from'react';
 
@@ -549,11 +594,14 @@ function FunctionComp({name, childText}) {
 
 export default FunctionComp;
 ```
+
 了解了 useCallback 的作用之后，那么我们结合一下之前的 useMemo React.memo 想一下，不难猜出它们经常配合起来使用。
+
 - React.memo 通过判断 props 是否改变 来 决定能否使用组件的缓存，props 可以传递函数吧，那假如就有函数类型的prop，如果这个 prop 没有使用 useCallback 包裹，那么每次都会返回一个新的函数，props肯定就改变了，也就导致 React.memo 无法使用组件的缓存了。
 - 同样的 useMemo 不仅可以缓存普通的计算结果，也可以用于缓存组件，那么结合 useCallback 也能达到 React.memo 的组件缓存效果。
 
 用 useMemo 实现 useCallback：
+
 ```jsx
 function useCallback(fn, dependencies) {
   return useMemo(() => fn, dependencies);
@@ -561,6 +609,7 @@ function useCallback(fn, dependencies) {
 ```
 
 ### useContext
+
 配合 createContext 使用，可以让我们在组件之间共享状态，无关组件的层级，只要在一个组件中 Provider，该组件的任意子孙组件都能通过 useContext 获取到，如下示例：
 
 **就是Vue 中的 provider 和 inject。**
@@ -589,7 +638,7 @@ const Button = ({children}) => {
 }
 
 function FunctionComp() {
-  return ( 
+  return (
     <ThemeContext.Provider value='green'>
       <h1>FunctionComp</h1>
       <Toolbar>
@@ -605,9 +654,11 @@ export default FunctionComp;
 ```
 
 ### useImperativeHandle
+
 通过 useImperativeHandle 可以可以暴露一些 API 给父组件，父组件可调用，改变子组件的状态。
 
 相当于 Vue3 的 expose。
+
 ```jsx
 import React, { forwardRef, useImperativeHandle, useRef } from'react';
 
@@ -657,7 +708,9 @@ export default function FunctionComp() {
 ```
 
 ### useSyncExternalStore
+
 useSyncExternalStore 用于订阅一些外部的数据源，当数据源发生变化时，会自动重新渲染组件。比如你想获取浏览器API上的一些数据：
+
 ```jsx
 import React, { useSyncExternalStore } from'react';
 const subscribe = (callback) => {
@@ -677,13 +730,14 @@ const getSnapshot = () => {
 
 export default function FunctionComp() {
   const isOnline = useSyncExternalStore(subscribe, getSnapshot)
-  return ( 
+  return (
       <h2>{isOnline ? 'online' : 'offline'}</h2>
   );
 }
 ```
 
 ## 自定义Hook
+
 与 react 内置的 Hook 一致，自定义 Hook 也以 use 开头，用于将一些需要在多个地方重复使用的逻辑封装起来，提高复用性。类似`Vue Composition API` 的 组合式函数。比如 useSyncExternalStore 的例子，我们在多个地方需要使用网络状态，那我们就可以把这个处理网络状态的逻辑封装起来，成为一个自定义的 `Hook`， 然后在需要的地方使用。
 
 ```jsx
@@ -734,4 +788,3 @@ const HighComp = (Comp) => {
   }
 }
 ```
-

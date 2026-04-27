@@ -3,7 +3,7 @@ title: 浏览器运行机制
 author: lvzl
 ---
 
-<img data-fancybox="gallery" src="https://mp-780ec593-98c3-47c6-9328-1690ac79007b.cdn.bspapp.com/images//browser-run.png"/>
+<img data-fancybox="gallery" src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//browser-run.png"/>
 
 <script setup>
   import useFancybox from '@use/useFancybox.js'
@@ -26,22 +26,24 @@ author: lvzl
 - **preload**
 - **prefetch**
 - **preload**、**prefetch**有什么区别
-  1.  可以让你按照自己的想法**给重要的资源一个更高的优先级， 无论是 preload 还是 prefetch，都只会加载，不会执行**
-  2.  **preload**：以高优先级为当前页面加载资源
-  3.  **prefetch**：以低优先级为后面的页面加载未来需要的资源，只会在空闲时才去加载
-  4.  文件加载
-  ```html
-  <link rel="preload" href="main.js" as="script">
-  <link rel="prefetch" href="news.js" as="script">
-  ```
-  5.  文件执行
-  ```html
-  <script src="main.js" defer></script>
-  ```
-  6.  **preload 的资源应该在当前页面立即使用**，如果不**加上 script 标签执行**预加载的资源，控制台中会显示警告，提示预加载的资源在当前页面没有被引用
-  7.  **prefetch**的目的是取未来会使用的资源，所以当用户从 A 页面跳转到 B 页面时，进行中的**preload**的资源会被中断，而**prefetch**不会
-  8.  使用**preload**时，应配合**as**属性，表示该资源的优先级，使用** as="style" **属性将获得最高的优先级，**as ="script"**将获得低优先级或中优先级，其他可以取的值有**font/image/audio/video**
-  9.  **preload **字体时要加上 **crossorigin **属性，即使没有跨域，否则会重复加载**<link rel="preload href="font.woff" as="font" crossorigin>**
+    1.  可以让你按照自己的想法**给重要的资源一个更高的优先级， 无论是 preload 还是 prefetch，都只会加载，不会执行**
+    2.  **preload**：以高优先级为当前页面加载资源
+    3.  **prefetch**：以低优先级为后面的页面加载未来需要的资源，只会在空闲时才去加载
+    4.  文件加载
+    ```html
+    <link rel="preload" href="main.js" as="script">
+    <link rel="prefetch" href="news.js" as="script">
+    ```
+
+    5.  文件执行
+    ```html
+    <script src="main.js" defer></script>
+    ```
+
+    6.  **preload 的资源应该在当前页面立即使用**，如果不**加上 script 标签执行**预加载的资源，控制台中会显示警告，提示预加载的资源在当前页面没有被引用
+    7.  **prefetch**的目的是取未来会使用的资源，所以当用户从 A 页面跳转到 B 页面时，进行中的**preload**的资源会被中断，而**prefetch**不会
+    8.  使用**preload**时，应配合**as**属性，表示该资源的优先级，使用** as="style" **属性将获得最高的优先级，**as ="script"**将获得低优先级或中优先级，其他可以取的值有**font/image/audio/video**
+    9.  **preload **字体时要加上 **crossorigin **属性，即使没有跨域，否则会重复加载**<link rel="preload href="font.woff" as="font" crossorigin>**
 
 ### 回流和重绘
 
