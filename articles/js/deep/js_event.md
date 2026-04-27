@@ -52,7 +52,7 @@ author: lvzl
 </body>
 ```
 
-<img data-fancybox="gallery"  src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//dom1-event.png" />
+<img data-fancybox="gallery"  src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/dom1-event.png" />
 
 点击 `li` 元素，将依次打印: `li => ul => body`，这种通过`attachEvent`定义事件监听就是 `IE` 事件模型。
 
@@ -85,6 +85,6 @@ author: lvzl
 </body>
 ```
 
-<img data-fancybox="gallery"  src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//dom2-event.png" />
+<img data-fancybox="gallery"  src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/dom2-event.png" />
 
 这种通过`addEventListener`定义事件监听就是 `DOM2` 级事件模型。

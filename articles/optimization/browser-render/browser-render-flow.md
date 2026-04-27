@@ -3,7 +3,7 @@ title: 浏览器运行机制
 author: lvzl
 ---
 
-<img data-fancybox="gallery" src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//browser-run.png"/>
+<img data-fancybox="gallery" src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/browser-run.png"/>
 
 <script setup>
   import useFancybox from '@use/useFancybox.js'
@@ -30,12 +30,14 @@ author: lvzl
     2.  **preload**：以高优先级为当前页面加载资源
     3.  **prefetch**：以低优先级为后面的页面加载未来需要的资源，只会在空闲时才去加载
     4.  文件加载
+
     ```html
     <link rel="preload" href="main.js" as="script">
     <link rel="prefetch" href="news.js" as="script">
     ```
 
     5.  文件执行
+
     ```html
     <script src="main.js" defer></script>
     ```

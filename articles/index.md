@@ -67,7 +67,7 @@ article.push(...originCopy)
 <style>
 #main-page {
   height: calc(100vh - 64px);
-  background-image: url('https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//hero-bg-2x.webp');
+  background-image: url('https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/hero-bg-2x.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

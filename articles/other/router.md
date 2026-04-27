@@ -183,8 +183,8 @@ export default class Router {
 
 ### 基于 history
 
-<img src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//history.gif" />
+<img src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/history.gif" />
 
 ### 基于 hash
 
-<img src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//hash.gif" />
+<img src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/hash.gif" />

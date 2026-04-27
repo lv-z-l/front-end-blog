@@ -3,7 +3,7 @@ title: computed
 author: lvzl
 ---
 
-<img data-fancybox="gallery" src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images//computed.jpg" />
+<img data-fancybox="gallery" src="https://env-00jy6768oqsh-static.normal.cloudstatic.cn/images/computed.jpg" />
 
 <script setup>
   import useFancybox from '@use/useFancybox.js'
