@@ -56,6 +56,7 @@ onBeforeUnmount(() => observer && observer.unobserve(box.value))
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 16px;
 }
 </style>

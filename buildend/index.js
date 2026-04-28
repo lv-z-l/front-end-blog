@@ -1,10 +1,8 @@
-const { readFileSync, writeFileSync } = require('fs')
+import { readFileSync, writeFileSync } from 'fs'
+import { resolve } from 'path'
+import { JSDOM } from 'jsdom'
 
-const path = require('path')
-
-const { JSDOM } = require('jsdom')
-
-const htmlString = readFileSync(path.resolve('.vitepress/dist/index.html'), { encoding: 'utf-8' })
+const htmlString = readFileSync(resolve('.vitepress/dist/index.html'), { encoding: 'utf-8' })
 
 const dom = new JSDOM(htmlString)
 
@@ -18,4 +16,4 @@ meta.setAttribute('content', 'never')
 
 head.insertBefore(meta, head.childNodes[0])
 
-writeFileSync(path.resolve('.vitepress/dist/index.html'), document.querySelector('html').outerHTML)
+writeFileSync(resolve('.vitepress/dist/index.html'), document.querySelector('html').outerHTML)

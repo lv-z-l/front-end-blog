@@ -1,5 +1,11 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { dirname } from 'path'
+import { pathToFileURL } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const SRC_DIR = 'articles'
 
@@ -8,10 +14,10 @@ const TITLE_SUFFIX = 'author: '
 
 const IGNORE_DIR = ['index', 'nav']
 
-function read(path, res) {
-  const dirs = fs.readdirSync(path)
+function read(dirPath, res) {
+  const dirs = fs.readdirSync(dirPath)
   dirs.forEach(dir => {
-    const current = path + '/' + dir
+    const current = dirPath + '/' + dir
     const fileStat = fs.statSync(current)
     if (fileStat.isDirectory()) {
       read(current, res)
@@ -25,7 +31,7 @@ function read(path, res) {
   })
 }
 
-function getNavJs() {
+async function getNavJs() {
   const res = []
   const source = path.resolve(SRC_DIR)
   const dirs = fs.readdirSync(source).filter(dir => !dir.includes('.'))
@@ -33,7 +39,8 @@ function getNavJs() {
     const dir = dirs[i]
     const current = source + '/' + dir + '/nav.js'
     try {
-      const data = require(current)
+      const fileUrl = pathToFileURL(path.resolve(current)).href
+      const data = (await import(fileUrl)).default
       if (data.sideText) {
         const sideDirs = fs.readdirSync(source + '/' + dir)
         data.sideDirs = sideDirs.filter(dir => !dir.includes('.'))
@@ -51,8 +58,8 @@ export function genItems(dir) {
   return res
 }
 
-export function genNavSide() {
-  const navJs = getNavJs()
+export async function genNavSide() {
+  const navJs = await getNavJs()
   const nav = []
   const sidebar = {}
   navJs.sort((a, b) => a.sort - b.sort)
